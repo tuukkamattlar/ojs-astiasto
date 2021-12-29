@@ -42,6 +42,18 @@ export default function OrderForm(props) {
   const [dateTime, setDateTime] = useState('')
   const [preCalc, setPreCalc] = useState(0)
   
+  function clearAll() {
+    setOrder(AstiastoData)
+    setOrdererName('')
+    setEmail('')
+    setInvEmail('')
+    setKiltaYhdistys('')
+    setTelePuh('')
+    setAddress('')
+    setDateTime('')
+    setPreCalc('')
+    alert('Success!')
+  }
 
 
   const [order, setOrder] = useState(AstiastoData)
@@ -59,7 +71,7 @@ export default function OrderForm(props) {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: bodySend
     })
-      .then()// THEN TODO
+      .then(() => clearAll())// THEN TODO
       .catch(error => alert(error));
 
     e.preventDefault();
@@ -136,6 +148,7 @@ export default function OrderForm(props) {
       setIsValid(true)
     }
   }
+
 
 
   useEffect(() => {
