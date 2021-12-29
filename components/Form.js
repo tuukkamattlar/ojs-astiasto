@@ -41,18 +41,19 @@ export default function OrderForm(props) {
   const [address, setAddress] = useState('')
   const [dateTime, setDateTime] = useState('')
   const [preCalc, setPreCalc] = useState(0)
+  
 
 
   const [order, setOrder] = useState(AstiastoData)
 
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     const newMessage = outputOrder;
     if (isValid) {
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name": "contactForm", newMessage })
+        body: { "form-name": "contactForm", newMessage }
       })
         .then(() => alert("Success!"))
         .catch(error => alert(error));
@@ -125,7 +126,7 @@ export default function OrderForm(props) {
     Object.keys(order).forEach( function(val){
       output[order[val].FI] = parseInt(order[val].ORDER)
     })
-    setOutputOrder(output)
+    setOutputOrder({...{}, output})
     if(output["Nimi"].length > 1 && output["E-mail"].length > 1 && output["Telegram/puh"].length > 1 && output["Osoite"].length > 1 && output["Ilmoitettu hinta"] > 0.0){
       setIsValid(true)
     }
