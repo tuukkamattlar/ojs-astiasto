@@ -52,17 +52,16 @@ export default function OrderForm(props) {
         .join("&");
   }
 
-  const handleSubmit = (e) => {
-    const newMessage = outputOrder;
-    if (isValid) {
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name": "contact", ...outputOrder.output })
-      })
-        .then(() => console.log('success'))
-        .catch(error => alert(error));
-    };
+  const handleSubmit = e => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...outputOrder.output })
+    })
+      .then(() => alert("Success!"))
+      .catch(error => alert(error));
+
+    e.preventDefault();
   };
 
   const totalPrice = () => {
@@ -149,7 +148,7 @@ export default function OrderForm(props) {
   return (
     <>
       <h2>{HeadName[lan]}</h2>
-      <Form name="contact" >
+      <Form name="contact" onSubmit={handleSubmit} >
       <div className='contact'>
         <h5>{contactField[lan]}</h5>
         <p>
@@ -276,9 +275,9 @@ export default function OrderForm(props) {
             <p>
             {
               isValid ?
-              <Button type="submit" variant="success" onClick={(e) => handleSubmit(e)}>{sendField[lan]}</Button>
+              <Button type="submit" variant="success" >{sendField[lan]}</Button>
               :
-              <Button type="submit" variant="danger" onClick={(e) => handleSubmit(e)} disabled>{sendField[lan]}</Button>
+              <Button type="submit" variant="danger" disabled>{sendField[lan]}</Button>
             }
             </p>
           </div>
