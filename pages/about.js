@@ -15,21 +15,7 @@ export default function About() {
 
   return (
     <div>
-      <form name="try" method="post" data-netlify="true" onSubmit="submit">
-        <input type="hidden" name="form-name" value="try"/>
-      <p>
-        <label>Your Name: <input type="text" name="name" /></label>   
-      </p>
-      <p>
-        <label>Your Email: <input type="email" name="email" /></label>
-      </p>
-      <p>
-        <label>Message: <textarea name="message"></textarea></label>
-      </p>
-      <p>
-        <button type="submit">Send</button>
-      </p>
-    </form>
+      deez nuts
     </div>
   )
 }

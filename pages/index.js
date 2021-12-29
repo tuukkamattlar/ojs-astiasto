@@ -57,9 +57,6 @@ export default function Home() {
       </Navbar>
         <Header title={WelcomeName[language]} />
         <p>
-          Get started by editing indez nuts bios boi
-        </p>
-        <p>
           {InfoName[language]}
         </p>
       

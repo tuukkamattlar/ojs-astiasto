@@ -1,0 +1,179 @@
+
+    {
+        "WaterGlass": {
+          "TYPE": "glass",
+          "FI": "Vesilasi",
+          "EN": "Water glass",
+          "PRICE": 0.6,
+          "MAXNRO": 230,
+          "SIZE": "30 cl",
+          "OFI": "30 cl",
+          "OEN": "30 cl",
+          "ORDER": 0
+        },
+        "SparklingGlass":{
+          "TYPE": "glass",
+          "FI": "Kuohuviinilasi",
+          "EN": "Sparkling wine glass",
+          "PRICE": 0.6,
+          "MAXNRO": 230,
+          "SIZE": "15 cl",
+          "OFI": "30 cl",
+          "OEN": "30 cl",
+          "ORDER": 0
+        },
+        "WhiteGlass":{
+          "TYPE": "glass",
+          "FI": "Valkoviinilasi",
+          "EN": "White wine glass",
+          "PRICE": 0.6,
+          "MAXNRO": 230,
+          "SIZE": "30 cl",
+          "OFI": "30 cl",
+          "OEN": "30 cl",
+          "ORDER": 0
+        },
+        "RedGlass":{
+          "TYPE": "glass",
+          "FI": "Punaviinilasi",
+          "EN": "Red Wine glass",
+          "PRICE": 0.6,
+          "MAXNRO": 230,
+          "SIZE": "30 cl",
+          "OFI": "",
+          "OEN": "",
+          "ORDER": 0
+        },
+        "AromaGlass":{
+          "TYPE": "glass",
+          "FI": "Aromilasi",
+          "EN": "Aroma glass",
+          "PRICE": 0.6,
+          "MAXNRO": 230,
+          "SIZE": "30 cl",
+          "OFI": "",
+          "OEN": "",
+          "ORDER": 0
+        },
+        "ShotGlass":{
+          "TYPE": "glass",
+          "FI": "Shottilasi",
+          "EN": "Shot glass",
+          "PRICE": 0.6,
+          "MAXNRO": 230,
+          "SIZE": "4 cl",
+          "OFI": "",
+          "OEN": "",
+          "ORDER": 0
+        },
+        "WaterJug":{
+          "TYPE": "glass",
+          "FI": "Vesikannu",
+          "EN": "Water jug",
+          "PRICE": 0.6,
+          "MAXNRO": 40,
+          "SIZE": "1 l",
+          "OFI": "",
+          "OEN": "",
+          "ORDER": 0
+        },
+        "startPlate":{
+          "TYPE": "plate",
+          "FI": "Alkupalalautanen",
+          "EN": "Starter plate",
+          "PRICE": 0.6,
+          "MAXNRO": 230,
+          "SIZE": "17 cm",
+          "OFI": "",
+          "OEN": "",
+          "ORDER": 0
+        },
+        "deepPlate":{
+          "TYPE": "plate",
+          "FI": "Syvä lautanen",
+          "EN": "Deep plate",
+          "PRICE": 0.6,
+          "MAXNRO": 230,
+          "SIZE": "20 cm",
+          "OFI": "",
+          "OEN": "",
+          "ORDER": 0
+        },
+        "bigPlate":{
+          "TYPE": "plate",
+          "FI": "Iso lautainen",
+          "EN": "Big plate",
+          "PRICE": 0.6,
+          "MAXNRO": 230,
+          "SIZE": "23 cm",
+          "OFI": "",
+          "OEN": "",
+          "ORDER": 0
+        },
+        "startCutlery":{
+          "TYPE": "cutlery",
+          "FI": "Alkuruoka-aterimet",
+          "EN": "Starter cutlery",
+          "PRICE": 0.6,
+          "MAXNRO": 230,
+          "SIZE": "30 cl",
+          "OFI": "",
+          "OEN": "",
+          "ORDER": 0
+        },
+        "mainCutlery":{
+          "TYPE": "cutlery",
+          "FI": "Pääruoka-aterimet",
+          "EN": "Main cutlery",
+          "PRICE": 0.6,
+          "MAXNRO": 230,
+          "SIZE": "30 cl",
+          "OFI": "",
+          "OEN": "",
+          "ORDER": 0
+        },
+        "mainSpoonCutlery":{
+          "TYPE": "cutlery",
+          "FI": "Pääruokalusikka",
+          "EN": "Main spoon",
+          "PRICE": 0.6,
+          "MAXNRO": 230,
+          "SIZE": "30 cl",
+          "OFI": "",
+          "OEN": "",
+          "ORDER": 0
+        },
+        "dessertCutlery":{
+          "TYPE": "cutlery",
+          "FI": "Jälkiruoka-aterimet",
+          "EN": "Dessert cutlery",
+          "PRICE": 0.6,
+          "MAXNRO": 230,
+          "SIZE": "30 cl",
+          "OFI": "",
+          "OEN": "",
+          "ORDER": 0
+        },
+        "coffeeKit":{
+          "TYPE": "other",
+          "FI": "Kavisetti",
+          "EN": "CC",
+          "PRICE": 0.6,
+          "MAXNRO": 230,
+          "SIZE": "30 cl",
+          "OFI": "Sisältää kahvikupin, tassin sekä lusikan",
+          "OEN": "Includes coffee things",
+          "ORDER": 0
+        },
+        "creamItem":{
+          "TYPE": "other",
+          "FI": "Kermakko",
+          "EN": "CC",
+          "PRICE": 0.6,
+          "MAXNRO": 230,
+          "SIZE": "30 cl",
+          "OFI": "",
+          "OEN": "",
+          "ORDER": 0
+        }
+    }
