@@ -150,7 +150,8 @@ export default function OrderForm(props) {
   return (
     <>
       <h2>{HeadName[lan]}</h2>
-      <Form name="contact" onSubmit={handleSubmit} data-netlify="true" >
+      <Form name="contact" onSubmit={handleSubmit} method="POST" data-netlify="true" >
+      <input type="hidden" name="form-name" value="contact" />
       <div className='contact'>
         <h5>{contactField[lan]}</h5>
         <p>
@@ -170,22 +171,22 @@ export default function OrderForm(props) {
           </p>
           <p>
           <Form.Label>{telepuhField[lan]}
-          <Form.Control type="text" name="Puhelin_telegram" value={telePuh} onInput={e => setTelePuh(e.target.value)}/>
+          <Form.Control type="text" name="muuKontakti" value={telePuh} onInput={e => setTelePuh(e.target.value)}/>
           </Form.Label>
         </p>
         <p>
           <Form.Label>{kilta[lan]}
-          <Form.Control type="text"  name="Kilta_yhdistys" value={kiltaYhdistys} onInput={e => setKiltaYhdistys(e.target.value)}/>
+          <Form.Control type="text"  name="yhdistys" value={kiltaYhdistys} onInput={e => setKiltaYhdistys(e.target.value)}/>
           </Form.Label>
         </p>
         <p>
           <Form.Label>{dateField[lan]}
-          <Form.Control as="textarea"  name="päiväys" rows={1} value={dateTime} onInput={e => setDateTime(e.target.value)}/>
+          <Form.Control as="textarea"  name="PVM" rows={1} value={dateTime} onInput={e => setDateTime(e.target.value)}/>
           </Form.Label>
         </p>
         <p>
           <Form.Label>{addressField[lan]}
-          <Form.Control as="textarea"  name="osoite" rows={2} value={address} onInput={e => setAddress(e.target.value)}/>
+          <Form.Control as="textarea"  name="ohje" rows={2} value={address} onInput={e => setAddress(e.target.value)}/>
           </Form.Label>
         </p>
       </div>
