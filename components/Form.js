@@ -9,16 +9,35 @@ export default function OrderForm(props) {
   const emailField = {'FI': 'Sähköposti','EN': 'Email'}
   const sendField = {'FI': 'Lähetä','EN': 'Send'}
 
+
+  const [isValid, setIsValid] = useState(true)
+
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   //const [address, setAddress] = useState('')
 
-
+  const handleSubmit = e => {
+    const newMessage = {
+      fullName: name,
+      email: email
+    };
+    if (isValid) {
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "contactForm", newMessage })
+      })
+        .then(() => alert("Success!"))
+        .catch(error => alert(error));
+      e.preventDefault();
+    };
+  };
 
   return (
     <>
       <h2>{HeadName[lan]}</h2>
       <Form name="contact" netlify method="POST" netlify-honeypot="bot-field" data-netlify="true" >
+      <input type="hidden" name="form-name" value="contact"/>
         <p>
           <Form.Label>
             {nameField[lan]}
@@ -32,7 +51,7 @@ export default function OrderForm(props) {
         </p>
 
         <p>
-          <Button type="submit">{sendField[lan]}</Button>
+          <Button type="submit" onClick={() => handleSubmit()}>{sendField[lan]}</Button>
         </p>
       </Form>
     </>
