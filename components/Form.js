@@ -54,13 +54,12 @@ export default function OrderForm(props) {
 
   const handleSubmit = e => {
     const bodySend = encode({ "form-name": "contact", ...outputOrder.output })
-    console.log(bodySend)
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...outputOrder.output })
+      body: bodySend
     })
-      .then(() => alert("Success!"))
+      .then()// THEN TODO
       .catch(error => alert(error));
 
     e.preventDefault();
@@ -150,7 +149,7 @@ export default function OrderForm(props) {
   return (
     <>
       <h2>{HeadName[lan]}</h2>
-      <Form name="contact" onSubmit={handleSubmit} method="POST" data-netlify="true" >
+      <Form name="contact" onSubmit={event => handleSubmit(event)} method="POST" data-netlify="true" >
       <input type="hidden" name="form-name" value="contact" />
       <div className='contact'>
         <h5>{contactField[lan]}</h5>
@@ -161,17 +160,17 @@ export default function OrderForm(props) {
           </p>
           <p>
           <Form.Label>{emailField[lan]}
-          <Form.Control type="email" name="Kontaktimaili" value={email} onInput={e => setEmail(e.target.value)}/>
+            <Form.Control type="email" name="Kontaktimaili" value={email} onInput={e => setEmail(e.target.value)}/>
           </Form.Label>
           </p>
           <p>
           <Form.Label>{laskutusEmailField[lan]}
-          <Form.Control type="email" name="Laskutusmaili" value={invEmail} onInput={e => setInvEmail(e.target.value)}/>
+            <Form.Control type="email" name="Laskutusmaili" value={invEmail} onInput={e => setInvEmail(e.target.value)}/>
           </Form.Label>
           </p>
           <p>
           <Form.Label>{telepuhField[lan]}
-          <Form.Control type="text" name="muuKontakti" value={telePuh} onInput={e => setTelePuh(e.target.value)}/>
+            <Form.Control type="text" name="muuKontakti" value={telePuh} onInput={e => setTelePuh(e.target.value)}/>
           </Form.Label>
         </p>
         <p>
@@ -181,12 +180,12 @@ export default function OrderForm(props) {
         </p>
         <p>
           <Form.Label>{dateField[lan]}
-          <Form.Control as="textarea"  name="PVM" rows={1} value={dateTime} onInput={e => setDateTime(e.target.value)}/>
+            <Form.Control as="textarea"  name="PVM" rows={1} value={dateTime} onInput={e => setDateTime(e.target.value)}/>
           </Form.Label>
         </p>
         <p>
           <Form.Label>{addressField[lan]}
-          <Form.Control as="textarea"  name="ohje" rows={2} value={address} onInput={e => setAddress(e.target.value)}/>
+            <Form.Control as="textarea"  name="ohje" rows={2} value={address} onInput={e => setAddress(e.target.value)}/>
           </Form.Label>
         </p>
       </div>
@@ -195,7 +194,7 @@ export default function OrderForm(props) {
             {automaticDescript[lan]}
           <p>
           <Form.Label>{autoInput[lan]}
-            <Form.Control type="number" name="precalc" value={preCalc} onInput={e => setPreCalc(e.target.value)}/>
+            <Form.Control type="number" value={preCalc} onInput={e => setPreCalc(e.target.value)}/>
           </Form.Label>
           <Button onClick={() => setPreset(preCalc)}>{autoInputCalc[lan]}</Button>
           </p>
