@@ -46,6 +46,11 @@ export default function OrderForm(props) {
 
   const [order, setOrder] = useState(AstiastoData)
 
+  const encode = (data) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+  }
 
   const handleSubmit = e => {
     const newMessage = outputOrder;
@@ -146,7 +151,6 @@ export default function OrderForm(props) {
     <>
       <h2>{HeadName[lan]}</h2>
       <Form name="contact" netlify method="POST" netlify-honeypot="bot-field" data-netlify="true" >
-      <input type="hidden" name="form-name" value="contact"/>
       <div className='contact'>
         <h5>{contactField[lan]}</h5>
         <p>
