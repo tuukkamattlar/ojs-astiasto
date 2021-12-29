@@ -8,13 +8,14 @@ export default function OrderForm(props) {
   const nameField = {'FI': 'Nimi','EN': 'Name'}
   const emailField = {'FI': 'Sähköposti','EN': 'Email'}
   const sendField = {'FI': 'Lähetä','EN': 'Send'}
+  const addressField = {'FI': 'Toimitusosoite','EN': 'Delivery address'}
 
 
   const [isValid, setIsValid] = useState(true)
 
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
-  //const [address, setAddress] = useState('')
+  const [address, setAddress] = useState('')
 
   const handleSubmit = e => {
     const newMessage = {
@@ -49,7 +50,16 @@ export default function OrderForm(props) {
             <Form.Control type="email" name="email" value={email} onInput={e => setEmail(e.target.value)}/>
             </Form.Label>
         </p>
-
+        <p>
+          <Form.Label>{emailField[lan]} 
+            <Form.Control type="email" name="email" value={email} onInput={e => setEmail(e.target.value)}/>
+            </Form.Label>
+        </p>
+        <p>
+          <Form.Label>{addressField[lan]} 
+          <Form.Control as="textarea" rows={2} value={address} onInput={e => setAddress(e.target.value)}/>
+          </Form.Label>
+          </p>
         <p>
           <Button type="submit" onClick={() => handleSubmit()}>{sendField[lan]}</Button>
         </p>
