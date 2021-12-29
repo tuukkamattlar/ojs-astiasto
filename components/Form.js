@@ -16,7 +16,7 @@ export default function OrderForm(props) {
   const addressField = {'FI': 'Toimitusosoite ja tarvittaessa toimitusohjeet','EN': 'Delivery address and instructions'}
   const automaticField = {'FI': 'Täytä osallistujamäärän mukaan','EN': 'Fill by participant number'}
   const automaticDescript = {'FI': 'Tässä voit täyttää formin alustavasti osallistujamäärän mukaan. Muista kuitenkin tarkistaa, että tilauksesi on mieluisa',
-  'EN': 'You may fill the form automatically with the number of participants. However, remember to check that your order is as desired.'}
+                            'EN': 'You may fill the form automatically with the number of participants. However, remember to check that your order is as desired.'}
   const autoInput = {'FI': 'Osallistujanmäärä','EN': 'Participants'}
   const autoInputCalc = {'FI': 'Laske','EN': 'Compute'}
   const kplPc = {'FI': 'kpl','EN': 'item'}
@@ -52,7 +52,7 @@ export default function OrderForm(props) {
         .join("&");
   }
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     const newMessage = outputOrder;
     if (isValid) {
       fetch("/", {
@@ -276,9 +276,9 @@ export default function OrderForm(props) {
             <p>
             {
               isValid ?
-              <Button type="submit" variant="success" onClick={() => handleSubmit()}>{sendField[lan]}</Button>
+              <Button type="submit" variant="success" onClick={(e) => handleSubmit(e)}>{sendField[lan]}</Button>
               :
-              <Button type="submit" variant="danger" onClick={() => handleSubmit()} disabled>{sendField[lan]}</Button>
+              <Button type="submit" variant="danger" onClick={(e) => handleSubmit(e)} disabled>{sendField[lan]}</Button>
             }
             </p>
           </div>
