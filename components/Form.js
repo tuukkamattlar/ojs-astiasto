@@ -58,7 +58,7 @@ export default function OrderForm(props) {
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name": "contact", ...this.outputOrder })
+        body: encode({ "form-name": "contact", ...this.outputOrder.output })
       })
         .then(() => console.log('success'))
         .catch(error => alert(error));
@@ -131,7 +131,6 @@ export default function OrderForm(props) {
       output[order[val].FI] = parseInt(order[val].ORDER)
     })
     setOutputOrder({...{}, output})
-    console.log(outputOrder)
     if(output["Nimi"].length > 1 && output["E-mail"].length > 1 && output["Telegram/puh"].length > 1 && output["Osoite"].length > 1 && output["Ilmoitettu hinta"] > 0.0){
       setIsValid(true)
     }
