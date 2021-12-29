@@ -122,8 +122,9 @@ export default function OrderForm(props) {
     let output = {}
     output["Nimi"] = String(ordererName);
     output["E-mail"] = String(email);
+    output["Laskutus-maili"] = String(invEmail);
     output["Telegram/puh"] = String(telePuh);
-    output["Kilta"] = String(kiltaYhdistys);
+    output["Yhdistys"] = String(kiltaYhdistys);
     output["Osoite"] = String(address);
     output["Aika"] = String(dateTime);
     output["Ilmoitettu hinta"]= parseFloat(totPrice);
@@ -149,8 +150,9 @@ export default function OrderForm(props) {
   return (
     <>
       <h2>{HeadName[lan]}</h2>
-      <Form name="contact" onSubmit={event => handleSubmit(event)} method="POST" data-netlify="true" >
+      <Form name="contact" action="/" onSubmit={event => handleSubmit(event)} method="POST" data-netlify="true" >
       <input type="hidden" name="form-name" value="contact" />
+      <input type="hidden" value={totPrice} name="Ilmoitettu hinta"/>
       <div className='contact'>
         <h5>{contactField[lan]}</h5>
         <p>
@@ -160,32 +162,32 @@ export default function OrderForm(props) {
           </p>
           <p>
           <Form.Label>{emailField[lan]}
-            <Form.Control type="email" name="Kontaktimaili" value={email} onInput={e => setEmail(e.target.value)}/>
+            <Form.Control type="email" name="E-mail" value={email} onInput={e => setEmail(e.target.value)}/>
           </Form.Label>
           </p>
           <p>
           <Form.Label>{laskutusEmailField[lan]}
-            <Form.Control type="email" name="Laskutusmaili" value={invEmail} onInput={e => setInvEmail(e.target.value)}/>
+            <Form.Control type="email" name="Laskutus-maili" value={invEmail} onInput={e => setInvEmail(e.target.value)}/>
           </Form.Label>
           </p>
           <p>
           <Form.Label>{telepuhField[lan]}
-            <Form.Control type="text" name="muuKontakti" value={telePuh} onInput={e => setTelePuh(e.target.value)}/>
+            <Form.Control type="text" name="Telegram/puh" value={telePuh} onInput={e => setTelePuh(e.target.value)}/>
           </Form.Label>
         </p>
         <p>
           <Form.Label>{kilta[lan]}
-          <Form.Control type="text"  name="yhdistys" value={kiltaYhdistys} onInput={e => setKiltaYhdistys(e.target.value)}/>
+          <Form.Control type="text"  name="Yhdistys" value={kiltaYhdistys} onInput={e => setKiltaYhdistys(e.target.value)}/>
           </Form.Label>
         </p>
         <p>
           <Form.Label>{dateField[lan]}
-            <Form.Control as="textarea"  name="PVM" rows={1} value={dateTime} onInput={e => setDateTime(e.target.value)}/>
+            <Form.Control as="textarea"  name="Aika" rows={1} value={dateTime} onInput={e => setDateTime(e.target.value)}/>
           </Form.Label>
         </p>
         <p>
           <Form.Label>{addressField[lan]}
-            <Form.Control as="textarea"  name="ohje" rows={2} value={address} onInput={e => setAddress(e.target.value)}/>
+            <Form.Control as="textarea"  name="Osoite" rows={2} value={address} onInput={e => setAddress(e.target.value)}/>
           </Form.Label>
         </p>
       </div>
@@ -216,7 +218,6 @@ export default function OrderForm(props) {
                 </p>
                   :
                   <></>
-
               ))}
             </div>
             <div>
@@ -286,7 +287,6 @@ export default function OrderForm(props) {
         </div>
       </Form>
       <div className="bottom">
-
       </div>
     </>
   )
