@@ -75,7 +75,7 @@ export default function OrderForm(props) {
         <div>
           Automaattinen täyttö
           <p>
-          <Form.Label>{emailField[lan]} 
+          <Form.Label>Laske automaattinen default
             <Form.Control type="number" name="precalc" value={preCalc} onInput={e => setPreCalc(e.target.value)}/>
           </Form.Label>
           <Button onClick={() => setPreset(preCalc)}>Laske</Button>
