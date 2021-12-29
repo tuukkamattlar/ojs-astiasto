@@ -53,11 +53,10 @@ export default function OrderForm(props) {
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: { "form-name": "contactForm", ...outputOrder }
+        body: { "form-name": "contactForm", ...outputOrder.order }
       })
-        .then()
+        .then(() => console.log('success'))
         .catch(error => alert(error));
-      e.preventDefault();
     };
   };
 
@@ -127,6 +126,7 @@ export default function OrderForm(props) {
       output[order[val].FI] = parseInt(order[val].ORDER)
     })
     setOutputOrder({...{}, output})
+    console.log(outputOrder)
     if(output["Nimi"].length > 1 && output["E-mail"].length > 1 && output["Telegram/puh"].length > 1 && output["Osoite"].length > 1 && output["Ilmoitettu hinta"] > 0.0){
       setIsValid(true)
     }
@@ -146,6 +146,7 @@ export default function OrderForm(props) {
     <>
       <h2>{HeadName[lan]}</h2>
       <Form name="contact" netlify method="POST" netlify-honeypot="bot-field" data-netlify="true" >
+      <input type="hidden" name="form-name" value="contact"/>
       <div className='contact'>
         <h5>{contactField[lan]}</h5>
         <p>
