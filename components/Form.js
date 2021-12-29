@@ -53,6 +53,8 @@ export default function OrderForm(props) {
   }
 
   const handleSubmit = e => {
+    const bodySend = encode({ "form-name": "contact", ...outputOrder.output })
+    console.log(bodySend)
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -148,42 +150,42 @@ export default function OrderForm(props) {
   return (
     <>
       <h2>{HeadName[lan]}</h2>
-      <Form name="contact" onSubmit={handleSubmit} >
+      <Form name="contact" onSubmit={handleSubmit} data-netlify="true" >
       <div className='contact'>
         <h5>{contactField[lan]}</h5>
         <p>
           <Form.Label>{nameField[lan]}
-            <Form.Control type="name" value={ordererName} onInput={e => setOrdererName(e.target.value)}/>
+            <Form.Control type="name" name="Nimi" value={ordererName} onInput={e => setOrdererName(e.target.value)}/>
           </Form.Label>
           </p>
           <p>
           <Form.Label>{emailField[lan]}
-          <Form.Control type="email" value={email} onInput={e => setEmail(e.target.value)}/>
+          <Form.Control type="email" name="Kontaktimaili" value={email} onInput={e => setEmail(e.target.value)}/>
           </Form.Label>
           </p>
           <p>
           <Form.Label>{laskutusEmailField[lan]}
-          <Form.Control type="email" value={invEmail} onInput={e => setInvEmail(e.target.value)}/>
+          <Form.Control type="email" name="Laskutusmaili" value={invEmail} onInput={e => setInvEmail(e.target.value)}/>
           </Form.Label>
           </p>
           <p>
           <Form.Label>{telepuhField[lan]}
-          <Form.Control type="text" value={telePuh} onInput={e => setTelePuh(e.target.value)}/>
+          <Form.Control type="text" name="Puhelin_telegram" value={telePuh} onInput={e => setTelePuh(e.target.value)}/>
           </Form.Label>
         </p>
         <p>
           <Form.Label>{kilta[lan]}
-          <Form.Control type="text" value={kiltaYhdistys} onInput={e => setKiltaYhdistys(e.target.value)}/>
+          <Form.Control type="text"  name="Kilta_yhdistys" value={kiltaYhdistys} onInput={e => setKiltaYhdistys(e.target.value)}/>
           </Form.Label>
         </p>
         <p>
           <Form.Label>{dateField[lan]}
-          <Form.Control as="textarea" rows={1} value={dateTime} onInput={e => setDateTime(e.target.value)}/>
+          <Form.Control as="textarea"  name="päiväys" rows={1} value={dateTime} onInput={e => setDateTime(e.target.value)}/>
           </Form.Label>
         </p>
         <p>
           <Form.Label>{addressField[lan]}
-          <Form.Control as="textarea" rows={2} value={address} onInput={e => setAddress(e.target.value)}/>
+          <Form.Control as="textarea"  name="osoite" rows={2} value={address} onInput={e => setAddress(e.target.value)}/>
           </Form.Label>
         </p>
       </div>
@@ -206,7 +208,7 @@ export default function OrderForm(props) {
                   ?
                   <p key={ind} className="formRow">
                   <div className="formInput">
-                    <Form.Control type="number" name={val} value={order[val].ORDER} onInput={e => setValue(val,e)}/>
+                    <Form.Control type="number" name={order[val].FI} value={order[val].ORDER} onInput={e => setValue(val,e)}/>
                   </div>
                   <div className="formName">
                     <h6>{order[val][lan]}, {order[val].SIZE}</h6> {order[val].PRICE} €/{kplPc[lan]}, (max. {order[val].MAXNRO})
@@ -224,7 +226,7 @@ export default function OrderForm(props) {
                   ?
                   <p key={ind} className="formRow">
                   <div className="formInput">
-                    <Form.Control type="number" name={val} value={order[val].ORDER} onInput={e => setValue(val,e)}/>
+                    <Form.Control type="number" name={order[val].FI} value={order[val].ORDER} onInput={e => setValue(val,e)}/>
                   </div>
                   <div className="formName">
                     <h6>{order[val][lan]}</h6> {order[val].PRICE} €/{kplPc[lan]}, (max. {order[val].MAXNRO})
@@ -241,7 +243,7 @@ export default function OrderForm(props) {
                   ?
                   <p key={ind} className="formRow">
                   <div className="formInput">
-                    <Form.Control type="number" name={val} value={order[val].ORDER} onInput={e => setValue(val,e)}/>
+                    <Form.Control type="number" name={order[val].FI} value={order[val].ORDER} onInput={e => setValue(val,e)}/>
                   </div>
                   <div className="formName">
                     <h6>{order[val][lan]}</h6> {order[val].PRICE} €/{kplPc[lan]}, (max. {order[val].MAXNRO})
@@ -258,7 +260,7 @@ export default function OrderForm(props) {
                   ?
                   <p key={ind} className="formRow">
                   <div className="formInput">
-                    <Form.Control type="number" name={val} value={order[val].ORDER} onInput={e => setValue(val,e)}/>
+                    <Form.Control type="number" name={order[val].FI} value={order[val].ORDER} onInput={e => setValue(val,e)}/>
                   </div>
                   <div className="formName">
                     <h6>{order[val][lan]}</h6> {order[val].PRICE} €/{kplPc[lan]}, (max. {order[val].MAXNRO})
