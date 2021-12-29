@@ -36,31 +36,34 @@ export default function Home() {
           crossorigin="anonymous"
         />
       </Head>
-      <main>
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-        <Container>
-        <Navbar.Brand href="/">{SiteName[language]}</Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="/">{HomeName[language]}</Nav.Link>
-            <Nav.Link href="/about">{AboutName[language]}</Nav.Link>
-          </Nav>
-          <Nav>
-            <NavDropdown title={language} id="navbarScrollingDropdown">
-              <NavDropdown.Item onClick={() => setLanguage('EN')}>EN</NavDropdown.Item>
-              <NavDropdown.Item onClick={() => setLanguage('FI')}>FI</NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-        </Navbar.Collapse>
-        </Container>
-      </Navbar>
-        <Header title={WelcomeName[language]} />
-        <p>
-          {InfoName[language]}
-        </p>
-      
-        <OrderForm language={language}/>
+      <main className="mainClass">
+        <div className="naviClass">
+          <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className="navi">
+            <Container>
+            <Navbar.Brand href="/">{SiteName[language]}</Navbar.Brand>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Collapse id="responsive-navbar-nav">
+              <Nav className="me-auto">
+                <Nav.Link href="/">{HomeName[language]}</Nav.Link>
+                <Nav.Link href="/about">{AboutName[language]}</Nav.Link>
+              </Nav>
+              <Nav>
+                <NavDropdown title={language} id="navbarScrollingDropdown">
+                  <NavDropdown.Item onClick={() => setLanguage('EN')}>EN</NavDropdown.Item>
+                  <NavDropdown.Item onClick={() => setLanguage('FI')}>FI</NavDropdown.Item>
+                </NavDropdown>
+              </Nav>
+            </Navbar.Collapse>
+            </Container>
+          </Navbar>
+        </div>
+        <div className="contentClass">
+          <Header title={WelcomeName[language]} />
+          <p>
+            {InfoName[language]}
+          </p>
+          <OrderForm language={language}/>
+        </div>
       </main>
 
     </div>

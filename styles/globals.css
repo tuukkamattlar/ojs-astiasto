@@ -12,6 +12,26 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+.mainClass {
+  position:absolute;
+  top:0px;
+  left:0;
+  width:100%
+}
+
+.naviClass {
+  position:absolute;
+  top:0px;
+  left:0;
+  width:100%
+}
+
+.contentClass {
+  padding: 10px;
+  max-width: 1000px;
+  margin: auto;
+}
+
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
@@ -26,6 +46,7 @@ input[type=number] {
   background-color: rgba(255, 127, 80, 0.178);
   padding: 15px;
 }
+
 
 .aterimet {
   background-color: rgba(107, 107, 107, 0.178);
@@ -44,29 +65,35 @@ input[type=number] {
 
 .formName {
   padding-left: 20px;
-  float: left;
+  float: right;
   width: 300px;
   
 }
 
 .formInput {
   float: left;
-    width: 90px;
+  width: 60px;
 }
 
 .formAndSubmit {
-  display: flex;
-  padding: 20px;
+
 }
 
 .formClass {
-  flex: 1;
+  float: left;
+  width: 70%;
+  min-width: 500px;
+  padding-bottom: 20px;
+}
+
+.formClass>div {
+  padding: auto;
 }
 
 .submitClass {
-  padding: 20px;
-  width: 300px;
-  height: 300px;
+  margin-top: 20px;
+  align-items: center;
+  text-align: center;
 }
 
 .bottom{
