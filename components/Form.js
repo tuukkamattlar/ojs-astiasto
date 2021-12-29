@@ -58,7 +58,7 @@ export default function OrderForm(props) {
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name": "contact", ...this.outputOrder.output })
+        body: encode({ "form-name": "contact", ...outputOrder.output })
       })
         .then(() => console.log('success'))
         .catch(error => alert(error));
@@ -149,7 +149,7 @@ export default function OrderForm(props) {
   return (
     <>
       <h2>{HeadName[lan]}</h2>
-      <Form name="contact" netlify method="POST" netlify-honeypot="bot-field" data-netlify="true" >
+      <Form name="contact" >
       <div className='contact'>
         <h5>{contactField[lan]}</h5>
         <p>
