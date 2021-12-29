@@ -47,13 +47,13 @@ export default function OrderForm(props) {
   const [order, setOrder] = useState(AstiastoData)
 
 
-  const handleSubmit = (e) => {
+  const handleSubmit = e => {
     const newMessage = outputOrder;
     if (isValid) {
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: { "form-name": "contactForm", ...outputOrder.order }
+        body: encode({ "form-name": "contact", ...this.outputOrder })
       })
         .then(() => console.log('success'))
         .catch(error => alert(error));
