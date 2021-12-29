@@ -53,9 +53,9 @@ export default function OrderForm(props) {
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: { "form-name": "contactForm", newMessage }
+        body: { "form-name": "contactForm", ...outputOrder }
       })
-        .then(() => alert("Success!"))
+        .then()
         .catch(error => alert(error));
       e.preventDefault();
     };
