@@ -62,6 +62,7 @@ export default function Home() {
         <p>
           {InfoName[language]}
         </p>
+      
         <OrderForm language={language}/>
       </main>
 
