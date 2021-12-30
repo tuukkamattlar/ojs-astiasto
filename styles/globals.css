@@ -4,18 +4,31 @@ body {
   margin: 0;
   position:absolute;
   top:0px;
-  left:0;
-  width:100vh !important;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
     Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-#__next {
-  position:absolute;
-  top:0px;
-  left:0;
-  width:100% !important;
+html, body {
+  width: 90vh;
+  width: 100%;
 }
+
+@media screen and (min-width: 600px) {
+  #__next {
+    position:relative;
+    width: 100vh !important;
+    margin: auto! important;
+  }
+}
+
+@media screen and (max-width: 601px) {
+  #__next {
+    position:relative;
+    margin: auto! important;
+  }
+}
+
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -23,18 +36,11 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-.container {
-  width: 100%;
-  top:0px;
-  left:0;
-}
-
 
 .mainClass {
-  position:absolute;
-  top:0px;
-  left:0;
-  width:100% !important;
+  position: relative;
+  max-width: 1500px;
+  margin: auto! important;
 }
 
 .naviClass {
@@ -42,6 +48,7 @@ input::-webkit-inner-spin-button {
   top:0px;
   left:0;
   width:100% !important;
+  margin: auto;
 }
 
 .contentClass {

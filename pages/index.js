@@ -17,7 +17,7 @@ export default function Home() {
   const InfoName = {'FI': 'Tällä sivustolla voit tilata astiat','EN': 'By using this form you can order tableware'}
 
   return (
-    <div className="container">
+    <div>
       <Head>
         <title>OJS astiastotilaus</title>
         <link rel="icon" href="/ojsicon.ico" />

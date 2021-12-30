@@ -286,7 +286,8 @@ export default function OrderForm(props) {
             </div>
           </div>
           <div className="submitClass">
-            <h3>{priceEstimate[lan]} {totPrice} €</h3>
+            <h5>{priceEstimate[lan]} {Math.round(totPrice*100/0.76)/100} € (vat 24 %)</h5>
+            <h5>{priceEstimate[lan]} {totPrice} € (vat 0 %)</h5>
             <p>{priceDescription[lan]}</p>
             <p>
             {
