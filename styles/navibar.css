@@ -56,6 +56,20 @@ nav, .togglerBar {
     right: 10px;
 }
 
+@media screen and (min-width: 800px){
+    .langMain {
+        position: absolute;
+        right: 5px;
+        width: 130px;
+    }
+    .langMain>a {
+        color: rgb(0, 0, 0) !important;
+    }
+    .langMain>a:hover {
+        color: rgba(0, 0, 0, 0.521) !important;
+    }
+}
+
 
 @media screen and (max-width: 800px){
     .togglerBar {

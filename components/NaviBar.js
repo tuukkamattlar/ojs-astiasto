@@ -39,7 +39,7 @@ export default function NaviBar(props) {
 
   function langButton(){
     return(
-        <a>
+        <a className='langMain'>
             <a className='langOpt' onClick={() => setLanguage('FI')}>FI</a>
             <a className='langOpt' onClick={() => setLanguage('EN')}>EN</a>
         </a>
