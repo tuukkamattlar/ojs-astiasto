@@ -13,7 +13,9 @@
     "papaparse": "^5.3.1",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.4",
-    "react-dom": "^17.0.2"
+    "react-calendar-month-view": "^0.7.0",
+    "react-dom": "^17.0.2",
+    "styled-components": "^5.3.3"
   },
   "devDependencies": {
     "@netlify/plugin-nextjs": "^4.0.0"

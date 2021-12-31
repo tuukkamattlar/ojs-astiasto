@@ -4,6 +4,7 @@
     padding-top: 10px;
     overflow: hidden;
     align-items: center;
+    width: 100%;
 }
 
 .formContact * {
@@ -111,10 +112,6 @@
     color: mistyrose;
 }
 
-.formAmountClass {
-    background-color: lemonchiffon;
-}
-
 .formOther {
     overflow:hidden;
     margin:10px;
@@ -129,29 +126,71 @@ OTHER
 .formAndSubmit * {
     padding: 0px;
     margin: 0px;
-    max-width: 400px;
+    max-width: 800px;
 }
 
-.formRow {
-    overflow:hidden;
-    display: inline;
+.formAmountClass {
     width: 100%;
-    height: 200px;
 }
-.formLabel {
-    max-width: 200px;
-    background-color: paleturquoise;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-    float: left;
+.formInputsNumber{
+    margin-top: 10px;
+    background-color: rgb(245, 245, 245);
 }
 
-.formInput {
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-    float: right;
+
+.formRow{
+    list-style-type:none;
+    text-align: left;
+    list-style-position: inside;
+    padding-top: 10px;
+    padding-left: 20px;
 }
 
-.formInput > input {
-    width: 100px;
+.formRow > li > input {
+    width: 80px!important;
+    padding-left: 5px;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+.formRow > li > a {
+    padding-left: 15px;
+}
+
+.formRow > li {
+    padding-top: 10px;
+}
+
+.submitClass {
+    width: 100%;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.submitClass * {
+    margin: 10px;
+}
+
+
+.submitButton > button {
+    font-size: 30px;
+    margin: 10px;
+    background-color: #2e8531; /* Green */
+    border: none;
+    color: white;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+.submitButton >button:hover {
+    background-color: #358338; /* Green */
+    color: rgb(207, 207, 207);
+}
+
+.alertInfo {
+    color: rgb(204, 5, 5);
 }

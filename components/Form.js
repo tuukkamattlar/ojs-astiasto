@@ -70,9 +70,11 @@ export default function OrderForm(props) {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: bodySend
     })
-      .then(() => clearAll())// THEN TODO
+      .then(
+        alert('All good')
+        )// THEN TODO
       .catch(error => alert(error));
-
+      window.location = '/';
     e.preventDefault();
   };
 
@@ -148,7 +150,14 @@ export default function OrderForm(props) {
     }
   }
 
-
+function ItemLister(val, ind){
+  return(
+    <li>
+      <input type="number" name={order[val].FI} value={order[val].ORDER} onInput={e => setValue(val,e)}/>
+      <a>{order[val][lan]}, {order[val].SIZE}, max. {order[val].MAXNRO} </a>
+  </li>
+  )
+}
 
   useEffect(() => {
     totalPrice()
@@ -208,91 +217,82 @@ export default function OrderForm(props) {
 
         <div className="formAndSubmit">
             <div className="formAmountClass">
-              <div>
+              <div className="formContact formInputsNumber">
                 <h3>{glassField[lan]}</h3>
+                <ul className='formRow'>
                 {Object.keys(order).map((val,ind)=>(
                   order[val].TYPE === "glass"
                     ?
-                    <div key={ind} className="formRow">
-                      <div className='formLabel'>
-                          {order[val][lan]}, {order[val].SIZE} {order[val].PRICE} €/{kplPc[lan]}, (max. {order[val].MAXNRO})
-                      </div>
-                      <div className="formInput">
-                        <input type="number" name={order[val].FI} value={order[val].ORDER} onInput={e => setValue(val,e)}/>
-                      </div>
-                  </div>
+                    <>
+                      {ItemLister(val, ind)}
+                    </>
                     :
                     <></>
                 ))}
+                </ul>
               </div>
-              <div>
+              <div className="formContact formInputsNumber">
                 <h3>{plateField[lan]}</h3>
+                <ul className='formRow'>
                 {Object.keys(order).map((val,ind)=>(
                   order[val].TYPE === "plate"
                     ?
-                    <p key={ind} className="formRow">
-                    <div className="formInput">
-                      <input type="number" name={order[val].FI} value={order[val].ORDER} onInput={e => setValue(val,e)}/>
-                    </div>
-                    <div className="formName">
-                      <h6>{order[val][lan]}</h6> {order[val].PRICE} €/{kplPc[lan]}, (max. {order[val].MAXNRO})
-                    </div>
-                  </p>
+                    <>
+                      {ItemLister(val, ind)}
+                    </>
                     :
                     <></>
                 ))}
+                </ul>
               </div>
-              <div>
+              <div className="formContact formInputsNumber">
                 <h3>{cutleryField[lan]}</h3>
+                <ul className='formRow'>
                 {Object.keys(order).map((val,ind)=>(
                   order[val].TYPE === "cutlery"
                     ?
-                    <p key={ind} className="formRow">
-                    <div className="formInput">
-                      <input type="number" name={order[val].FI} value={order[val].ORDER} onInput={e => setValue(val,e)}/>
-                    </div>
-                    <div className="formName">
-                      <h6>{order[val][lan]}</h6> {order[val].PRICE} €/{kplPc[lan]}, (max. {order[val].MAXNRO})
-                    </div>
-                  </p>
+                    <>
+                      {ItemLister(val, ind)}
+                    </>
                     :
                     <></>
                 ))}
+                </ul>
               </div>
-              <div>
+              <div className="formContact formInputsNumber">
                 <h3>{coffeeField[lan]}</h3>
+                <ul className='formRow'>
                 {Object.keys(order).map((val,ind)=>(
                   order[val].TYPE === "other"
                     ?
-                    <p key={ind} className="formRow">
-                    <div className="formInput">
-                      <input type="number" name={order[val].FI} value={order[val].ORDER} onInput={e => setValue(val,e)}/>
-                    </div>
-                    <div className="formName">
-                      <h6>{order[val][lan]}</h6> {order[val].PRICE} €/{kplPc[lan]}, (max. {order[val].MAXNRO})
-                    </div>
-                  </p>
+                    <>
+                      {ItemLister(val, ind)}
+                    </>
                     :
                     <></>
                 ))}
+                </ul>
               </div>
-            </div>
-            <div className="submitClass">
-              <h5>{priceEstimate[lan]} {Math.round(totPrice*100/0.76)/100} € (vat 24 %)</h5>
-              <h5>{priceEstimate[lan]} {totPrice} € (vat 0 %)</h5>
-              <p>{priceDescription[lan]}</p>
-              <p>
-              {
-                isValid ?
-                <Button type="submit" variant="success" >{sendField[lan]}</Button>
-                :
-                <Button type="submit" variant="danger" disabled>{sendField[lan]}</Button>
-              }
-              </p>
             </div>
           </div>
         </div>
       </div>
+      <div className="submitClass">
+        <div>
+          <h2>{priceEstimate[lan]}</h2>
+        </div>
+              <h5> {Math.round(totPrice*100/0.76)/100} € (vat 24 %)</h5>
+              <h5> {totPrice} € (vat 0 %)</h5>
+              <p>{priceDescription[lan]}</p>
+              <p className='submitButton'>
+              {
+                isValid ?
+                <button type="submit"  >{sendField[lan]}</button>
+                :
+                <h3 className='alertInfo'>Täytä vaadittavat tiedot</h3>
+              }
+              </p>
+            </div>
       </Form>
     </div>
   )
