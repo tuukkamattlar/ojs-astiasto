@@ -2,8 +2,6 @@ import NaviBar from '@components/NaviBar'
 import Contact from '@components/Contact'
 import { useState } from 'react'
 import Head from 'next/head'
-import frontPhoto from '../public/img/astiat_main.jpg'
-import Image from 'next/image'
 import useWindowDimensions from "functions/windowSize"
 
 import '../styles/globals.css'

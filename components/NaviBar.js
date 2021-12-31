@@ -1,7 +1,6 @@
 import Link from "next/link"
 import React, {useState, useEffect} from 'react'
 import useWindowDimensions from "functions/windowSize"
-import { useRef } from 'react';
 
 
 export default function NaviBar(props) {

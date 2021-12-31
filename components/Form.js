@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
-import InputGroup from 'react-bootstrap/InputGroup'
 import AstiastoData from "../astiasto.json"
 
 export default function OrderForm(props) {
