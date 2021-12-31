@@ -1,4 +1,6 @@
 .formClass {
+    margin:0px;
+    padding:0px;
     padding-top: 10px;
     overflow: hidden;
     align-items: center;
@@ -6,7 +8,7 @@
 
 .formContact * {
     padding: 0px;
-    margin: 10px;
+    margin: 5px;
 }
 
 .formWrapper {
@@ -21,9 +23,11 @@
 .formContact {
     margin-top: 0px;
     max-width: 350px;
+    width: 100%;
     float:left; 
     background-color: rgb(206, 206, 206);
     border-radius: 4px;
+    margin-left: 0px;
 }
 @media screen and (max-width: 1000px) {
     .formContact { 
@@ -38,8 +42,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    margin: 0 auto;
-    padding: 10px 10px;
+    margin: 0;
+    padding: 0px;
+    width: 100%;
   }
  
 .formContact >input,textarea, .autoFill > p > input {
@@ -47,7 +52,8 @@
     border-radius: 5px;
     box-sizing: border-box;
     padding: 10px;
-    width: 300px;
+    max-width: 300px;
+    width: 100%;
 }
 
 .formContact > textarea {

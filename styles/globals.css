@@ -27,12 +27,23 @@ input[type=number] {
   display: flex;
   flex-direction: column;
 }
+.NaviClassMain{
+  height: 500px;
+  overflow: hidden;
+  background-image: url('../public/img/astiat_main.jpg');
+  background-repeat: no-repeat;
+  background-size: cover; 
+  background-position: center center;
+  background-color: #cccccc;
+}
 
 .naviBar {
-  background-color: slategrey;
   position: relative;
   display: inline;
-  height: 60px;
+  vertical-align: top;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .mainContentClass {
@@ -43,6 +54,8 @@ input[type=number] {
   text-align: center;
   margin: auto;
   max-width: 1500px;
+  overflow: hidden;
+  width: 100%;
 
 }
 .mainContentClass * {

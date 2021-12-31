@@ -23,24 +23,32 @@ export default function NaviBar(props) {
   function burgerButton(){
       return(
         <div onClick={() => setToggleMenu(true)} className='navButton'>
-        <div className="bar1"></div>
-        <div className="bar2"></div>
-        <div className="bar3"></div>
-      </div>
+          <div className="bar1"></div>
+          <div className="bar2"></div>
+          <div className="bar3"></div>
+        </div>
       )
   }
+  function burgerButtonClose(){
+    return(
+      <div onClick={() => setToggleMenu(false)} className='navButton'>
+        <div className="bar1C"></div>
+        <div className="bar3C"></div>
+      </div>
+    )
+}
 
   function langButton(){
     return(
         <a>
-        <a className='langOpt' onClick={() => setLanguage('FI')}>FI</a>
-        <a className='langOpt' onClick={() => setLanguage('EN')}>EN</a>
-    </a>
+            <a className='langOpt' onClick={() => setLanguage('FI')}>FI</a>
+            <a className='langOpt' onClick={() => setLanguage('EN')}>EN</a>
+        </a>
     )
 }
   
   function showNavBar(){
-      if(width > 600){
+      if(width > 800){
           return(
             <ul className='NaviList'>
               <Link href="/" >
@@ -70,7 +78,7 @@ export default function NaviBar(props) {
                 </Link>
                 {langButton()}
                 <a>
-                    {burgerButton()}
+                    {burgerButtonClose()}
                 </a>
 
             </ul>
@@ -81,7 +89,7 @@ export default function NaviBar(props) {
             <>
                 <div className='togglerBar'>
                     <a className='siteName'>{SiteName[lan]}</a>
-                    <a>
+                    <a className='burgerButton'>
                     {burgerButton()}
                     </a>
                 </div>

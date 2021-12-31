@@ -2,6 +2,9 @@ import NaviBar from '@components/NaviBar'
 import Contact from '@components/Contact'
 import { useState } from 'react'
 import Head from 'next/head'
+import frontPhoto from '../public/img/astiat_main.jpg'
+import Image from 'next/image'
+import useWindowDimensions from "functions/windowSize"
 
 import '../styles/globals.css'
 import '../styles/navibar.css'
@@ -12,7 +15,7 @@ function Application({ Component, pageProps }) {
   const [language, setLanguage] = useState('FI')
 
   const loremIpsum = 'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-
+  const { height, width } = useWindowDimensions();
 
   return (
     <>
@@ -35,7 +38,9 @@ function Application({ Component, pageProps }) {
         />
       </Head>
       <div className='allContent'>
-        <NaviBar setLanguage={setLanguage} language={language} loremIpsum={loremIpsum} />
+        <div className='NaviClassMain'>
+          <NaviBar setLanguage={setLanguage} language={language} loremIpsum={loremIpsum} />
+        </div>
         <Component {...pageProps} language={language} loremIpsum={loremIpsum}/>
         <Contact language={language} loremIpsum={loremIpsum} />
       </div>
