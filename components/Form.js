@@ -215,8 +215,7 @@ function ItemLister(val, ind){
         </div>
 
 
-        <div className="formAndSubmit">
-            <div className="formAmountClass">
+        <div className="formAndSubmit formAmountClass">
               <div className="formContact formInputsNumber">
                 <h3>{glassField[lan]}</h3>
                 <ul className='formRow'>
@@ -274,7 +273,6 @@ function ItemLister(val, ind){
                 </ul>
               </div>
             </div>
-          </div>
         </div>
       </div>
       <div className="submitClass">

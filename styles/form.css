@@ -21,32 +21,147 @@
     padding: 10px;
  }
 
-.formContact {
-    margin-top: 0px;
-    max-width: 350px;
-    width: 100%;
-    float:left; 
-    background-color: rgb(206, 206, 206);
-    border-radius: 4px;
-    margin-left: 0px;
-}
-@media screen and (max-width: 1000px) {
+
+
+@media screen and (max-width: 1050px) {
     .formContact { 
      float: none;
      margin-right:0;
      width:auto;
      border:0; 
+     padding: 0px;
+       margin: 0px;
    }
- }
+   .formClass{
+       width: 100%;
+       padding: 0px;
+       margin: 0px;
+   }
+   form {
+       width: 100%;
 
-.formContact > form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin: 0;
-    padding: 0px;
+       padding: 0px !important;
+       margin: 0px !important;
+   }
+
+   .formWrapper {
+       width: 100%;
+       padding: 0px;
+       margin: 0px;
+   }
+   .formOther {
+       width: 100%;
+       margin: 0px!important;
+       padding: 0px !important;
+   }
+   .formAndSubmit{
+       width: 100%;
+       margin: 0px!important;
+       padding: 0px!important;
+   }
+   .formAmountClass{
     width: 100%;
-  }
+    margin: 0px!important;
+    padding: 0px!important;
+    }
+
+    .formInputsNumber{
+        margin-top: 20px !important;
+        padding-top: 20px !important;
+    }
+
+    .formAmountClass>div{
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+    .formRow{
+        list-style-type:none;
+        text-align: left;
+        list-style-position: inside;
+        padding-top: 10px;
+        padding-left: 20px;
+    }
+    
+    .submitClass {
+        width: 100%;
+        border-radius: 4px;
+        padding: 5px;
+    }
+
+    .submitClass * {
+        margin: 10px;
+    }
+    .submitClass {
+        width: 100%;
+        border-radius: 4px;
+        padding: 0px !important;
+        margin: 0px !important;
+    }
+
+    .submitClass * {
+        margin: 5px !important;
+        padding: 0px !important;
+        width: 100%;
+    }
+
+    .submitClass>div,h5,p {
+        margin: 0px !important;
+        padding: 0px !important;
+        width: 100% !important;
+    }
+
+
+}
+
+@media screen and (min-width: 1050px) {
+    .formClass > form {
+        justify-content: space-around;
+        display: inline-block;
+        width: 100vh;
+      }
+    .formContact {
+        margin-top: 0px;
+        max-width: 350px;
+        width: 100%;
+        float:left; 
+        background-color: rgb(206, 206, 206);
+        border-radius: 4px;
+        margin-left: 0px;
+    }
+    .formWrapper {
+        width: 100%;
+    }
+    .formRow{
+        list-style-type:none;
+        text-align: left;
+        list-style-position: inside;
+        padding-top: 10px;
+        padding-left: 20px;
+    }
+    
+    .submitClass {
+        width: 100%;
+        border-radius: 4px;
+        padding: 0px !important;
+        margin: 0px !important;
+    }
+
+    .submitClass * {
+        margin: 10px;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .submitClass>div,h5,p {
+        margin: 5px !important;
+        padding: 5px !important;
+    }
+
+
+}
+
+
  
 .formContact >input,textarea, .autoFill > p > input {
     border: 1px solid #d9d9d9;
@@ -133,18 +248,10 @@ OTHER
     width: 100%;
 }
 .formInputsNumber{
-    margin-top: 10px;
+    padding-top: 10px;
     background-color: rgb(245, 245, 245);
 }
 
-
-.formRow{
-    list-style-type:none;
-    text-align: left;
-    list-style-position: inside;
-    padding-top: 10px;
-    padding-left: 20px;
-}
 
 .formRow > li > input {
     width: 80px!important;
@@ -161,16 +268,6 @@ OTHER
 
 .formRow > li {
     padding-top: 10px;
-}
-
-.submitClass {
-    width: 100%;
-    border-radius: 4px;
-    padding: 5px;
-}
-
-.submitClass * {
-    margin: 10px;
 }
 
 
