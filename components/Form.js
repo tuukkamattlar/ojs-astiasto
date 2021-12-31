@@ -14,7 +14,7 @@ export default function OrderForm(props) {
   const dateField = {'FI': 'Päivämäärä ja tarpeen aikaväli','EN': 'Date and time period'}
   const telepuhField = {'FI': 'Telegram/puhelin','EN': 'Telegram/Phone number'}
   const addressField = {'FI': 'Toimitusosoite ja tarvittaessa toimitusohjeet','EN': 'Delivery address and instructions'}
-  const automaticField = {'FI': 'Täytä osallistujamäärän mukaan','EN': 'Fill by participant number'}
+  const automaticField = {'FI': 'Esitäytä osallistujamäärän mukaan','EN': 'Pre-fill by participant number'}
   const automaticDescript = {'FI': 'Tässä voit täyttää formin alustavasti osallistujamäärän mukaan. Muista kuitenkin tarkistaa, että tilauksesi on mieluisa',
                             'EN': 'You may fill the form automatically with the number of participants. However, remember to check that your order is as desired.'}
   const autoInput = {'FI': 'Osallistujanmäärä','EN': 'Participants'}
@@ -166,142 +166,135 @@ export default function OrderForm(props) {
       <Form name="contact" action="/" onSubmit={event => handleSubmit(event)} method="POST" data-netlify="true" >
       <input type="hidden" name="form-name" value="contact" />
       <input type="hidden" value={totPrice} name="Ilmoitettu hinta"/>
-      <div className='contact'>
+
+    <div className='formWrapper'>
+      <div className='formContact'>
+      
         <h5>{contactField[lan]}</h5>
-        <p>
-          <Form.Label>{nameField[lan]}
-            <Form.Control type="name" name="Nimi" value={ordererName} onInput={e => setOrdererName(e.target.value)}/>
-          </Form.Label>
-          </p>
-          <p>
-          <Form.Label>{emailField[lan]}
-            <Form.Control type="email" name="E-mail" value={email} onInput={e => setEmail(e.target.value)}/>
-          </Form.Label>
-          </p>
-          <p>
-          <Form.Label>{laskutusEmailField[lan]}
-            <Form.Control type="email" name="Laskutus-maili" value={invEmail} onInput={e => setInvEmail(e.target.value)}/>
-          </Form.Label>
-          </p>
-          <p>
-          <Form.Label>{telepuhField[lan]}
-            <Form.Control type="text" name="Telegram/puh" value={telePuh} onInput={e => setTelePuh(e.target.value)}/>
-          </Form.Label>
-        </p>
-        <p>
-          <Form.Label>{kilta[lan]}
-          <Form.Control type="text"  name="Yhdistys" value={kiltaYhdistys} onInput={e => setKiltaYhdistys(e.target.value)}/>
-          </Form.Label>
-        </p>
-        <p>
-          <Form.Label>{dateField[lan]}
-            <Form.Control as="textarea"  name="Aika" rows={1} value={dateTime} onInput={e => setDateTime(e.target.value)}/>
-          </Form.Label>
-        </p>
-        <p>
-          <Form.Label>{addressField[lan]}
-            <Form.Control as="textarea"  name="Osoite" rows={2} value={address} onInput={e => setAddress(e.target.value)}/>
-          </Form.Label>
-        </p>
+
+        <label>{nameField[lan]}</label>
+        <input type="name" name="Nimi" value={ordererName} onInput={e => setOrdererName(e.target.value)}/>
+
+        <label>{emailField[lan]}</label>
+        <input type="email" name="E-mail" value={email} onInput={e => setEmail(e.target.value)}/>
+
+        <label>{laskutusEmailField[lan]}</label>
+        <input type="email" name="Laskutus-maili" value={invEmail} onInput={e => setInvEmail(e.target.value)}/>
+
+        <label>{telepuhField[lan]}</label>
+          <input type="text" name="Telegram/puh" value={telePuh} onInput={e => setTelePuh(e.target.value)}/>
+
+        <label>{kilta[lan]}</label>
+        <input type="text"  name="Yhdistys" value={kiltaYhdistys} onInput={e => setKiltaYhdistys(e.target.value)}/>
+
+        <label>{dateField[lan]}</label>
+        <input as="textarea"  name="Aika" rows={1} value={dateTime} onInput={e => setDateTime(e.target.value)}/>
+
+        <label>{addressField[lan]}</label>
+        <textarea as="textarea"  name="Osoite" rows="3" value={address} onInput={e => setAddress(e.target.value)}/>
+
       </div>
-      <div className="autoFill">
-          <h5>{automaticField[lan]}</h5>
-            {automaticDescript[lan]}
-          <p>
-          <Form.Label>{autoInput[lan]}
-            <Form.Control type="number" value={preCalc} onInput={e => setPreCalc(e.target.value)}/>
-          </Form.Label>
-          <Button onClick={() => setPreset(preCalc)}>{autoInputCalc[lan]}</Button>
-          </p>
+
+      <div className='formOther'>
+        <div className="autoFill">
+            <h5>{automaticField[lan]}</h5>
+              {automaticDescript[lan]}
+              <p>
+                <label>{autoInput[lan]}</label>
+                <input type="number" value={preCalc} onInput={e => setPreCalc(e.target.value)}/>
+                <a onClick={() => setPreset(preCalc)}>{autoInputCalc[lan]}</a>
+              </p>
         </div>
+
+
         <div className="formAndSubmit">
-          <div className="formClass">
-            <div>
-              <h3>{glassField[lan]}</h3>
-              {Object.keys(order).map((val,ind)=>(
-                order[val].TYPE === "glass"
-                  ?
-                  <p key={ind} className="formRow">
-                  <div className="formInput">
-                    <Form.Control type="number" name={order[val].FI} value={order[val].ORDER} onInput={e => setValue(val,e)}/>
+            <div className="formAmountClass">
+              <div>
+                <h3>{glassField[lan]}</h3>
+                {Object.keys(order).map((val,ind)=>(
+                  order[val].TYPE === "glass"
+                    ?
+                    <div key={ind} className="formRow">
+                      <div className='formLabel'>
+                          {order[val][lan]}, {order[val].SIZE} {order[val].PRICE} €/{kplPc[lan]}, (max. {order[val].MAXNRO})
+                      </div>
+                      <div className="formInput">
+                        <input type="number" name={order[val].FI} value={order[val].ORDER} onInput={e => setValue(val,e)}/>
+                      </div>
                   </div>
-                  <div className="formName">
-                    <h6>{order[val][lan]}, {order[val].SIZE}</h6> {order[val].PRICE} €/{kplPc[lan]}, (max. {order[val].MAXNRO})
-                  </div>
-                </p>
-                  :
-                  <></>
-              ))}
+                    :
+                    <></>
+                ))}
+              </div>
+              <div>
+                <h3>{plateField[lan]}</h3>
+                {Object.keys(order).map((val,ind)=>(
+                  order[val].TYPE === "plate"
+                    ?
+                    <p key={ind} className="formRow">
+                    <div className="formInput">
+                      <input type="number" name={order[val].FI} value={order[val].ORDER} onInput={e => setValue(val,e)}/>
+                    </div>
+                    <div className="formName">
+                      <h6>{order[val][lan]}</h6> {order[val].PRICE} €/{kplPc[lan]}, (max. {order[val].MAXNRO})
+                    </div>
+                  </p>
+                    :
+                    <></>
+                ))}
+              </div>
+              <div>
+                <h3>{cutleryField[lan]}</h3>
+                {Object.keys(order).map((val,ind)=>(
+                  order[val].TYPE === "cutlery"
+                    ?
+                    <p key={ind} className="formRow">
+                    <div className="formInput">
+                      <input type="number" name={order[val].FI} value={order[val].ORDER} onInput={e => setValue(val,e)}/>
+                    </div>
+                    <div className="formName">
+                      <h6>{order[val][lan]}</h6> {order[val].PRICE} €/{kplPc[lan]}, (max. {order[val].MAXNRO})
+                    </div>
+                  </p>
+                    :
+                    <></>
+                ))}
+              </div>
+              <div>
+                <h3>{coffeeField[lan]}</h3>
+                {Object.keys(order).map((val,ind)=>(
+                  order[val].TYPE === "other"
+                    ?
+                    <p key={ind} className="formRow">
+                    <div className="formInput">
+                      <input type="number" name={order[val].FI} value={order[val].ORDER} onInput={e => setValue(val,e)}/>
+                    </div>
+                    <div className="formName">
+                      <h6>{order[val][lan]}</h6> {order[val].PRICE} €/{kplPc[lan]}, (max. {order[val].MAXNRO})
+                    </div>
+                  </p>
+                    :
+                    <></>
+                ))}
+              </div>
             </div>
-            <div>
-              <h3>{plateField[lan]}</h3>
-              {Object.keys(order).map((val,ind)=>(
-                order[val].TYPE === "plate"
-                  ?
-                  <p key={ind} className="formRow">
-                  <div className="formInput">
-                    <Form.Control type="number" name={order[val].FI} value={order[val].ORDER} onInput={e => setValue(val,e)}/>
-                  </div>
-                  <div className="formName">
-                    <h6>{order[val][lan]}</h6> {order[val].PRICE} €/{kplPc[lan]}, (max. {order[val].MAXNRO})
-                  </div>
-                </p>
-                  :
-                  <></>
-              ))}
+            <div className="submitClass">
+              <h5>{priceEstimate[lan]} {Math.round(totPrice*100/0.76)/100} € (vat 24 %)</h5>
+              <h5>{priceEstimate[lan]} {totPrice} € (vat 0 %)</h5>
+              <p>{priceDescription[lan]}</p>
+              <p>
+              {
+                isValid ?
+                <Button type="submit" variant="success" >{sendField[lan]}</Button>
+                :
+                <Button type="submit" variant="danger" disabled>{sendField[lan]}</Button>
+              }
+              </p>
             </div>
-            <div>
-              <h3>{cutleryField[lan]}</h3>
-              {Object.keys(order).map((val,ind)=>(
-                order[val].TYPE === "cutlery"
-                  ?
-                  <p key={ind} className="formRow">
-                  <div className="formInput">
-                    <Form.Control type="number" name={order[val].FI} value={order[val].ORDER} onInput={e => setValue(val,e)}/>
-                  </div>
-                  <div className="formName">
-                    <h6>{order[val][lan]}</h6> {order[val].PRICE} €/{kplPc[lan]}, (max. {order[val].MAXNRO})
-                  </div>
-                </p>
-                  :
-                  <></>
-              ))}
-            </div>
-            <div>
-              <h3>{coffeeField[lan]}</h3>
-              {Object.keys(order).map((val,ind)=>(
-                order[val].TYPE === "other"
-                  ?
-                  <p key={ind} className="formRow">
-                  <div className="formInput">
-                    <Form.Control type="number" name={order[val].FI} value={order[val].ORDER} onInput={e => setValue(val,e)}/>
-                  </div>
-                  <div className="formName">
-                    <h6>{order[val][lan]}</h6> {order[val].PRICE} €/{kplPc[lan]}, (max. {order[val].MAXNRO})
-                  </div>
-                </p>
-                  :
-                  <></>
-              ))}
-            </div>
-          </div>
-          <div className="submitClass">
-            <h5>{priceEstimate[lan]} {Math.round(totPrice*100/0.76)/100} € (vat 24 %)</h5>
-            <h5>{priceEstimate[lan]} {totPrice} € (vat 0 %)</h5>
-            <p>{priceDescription[lan]}</p>
-            <p>
-            {
-              isValid ?
-              <Button type="submit" variant="success" >{sendField[lan]}</Button>
-              :
-              <Button type="submit" variant="danger" disabled>{sendField[lan]}</Button>
-            }
-            </p>
           </div>
         </div>
-      </Form>
-      <div className="bottom">
       </div>
+      </Form>
     </div>
   )
 }

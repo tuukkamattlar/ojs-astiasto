@@ -1,4 +1,151 @@
 .formClass {
-    background-color: rgb(192, 192, 192);
     padding-top: 10px;
+    overflow: hidden;
+    align-items: center;
+}
+
+.formContact * {
+    padding: 0px;
+    margin: 10px;
+}
+
+.formWrapper {
+  overflow:hidden;
+}
+
+.formWrapper div {
+    min-height: 200px;
+    padding: 10px;
+ }
+
+.formContact {
+    margin-top: 0px;
+    max-width: 350px;
+    float:left; 
+    background-color: rgb(206, 206, 206);
+    border-radius: 4px;
+}
+@media screen and (max-width: 1000px) {
+    .formContact { 
+     float: none;
+     margin-right:0;
+     width:auto;
+     border:0; 
+   }
+ }
+
+.formContact > form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding: 10px 10px;
+  }
+ 
+.formContact >input,textarea, .autoFill > p > input {
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 10px;
+    width: 300px;
+}
+
+.formContact > textarea {
+    padding: 10px;
+}
+
+
+.formContact > label {
+    color: #3d3d3d;
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0px;
+    text-align: left;
+}
+
+.autoFill {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.autoFill * {
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+.autoFill > p {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.autoFill > p > input {
+    width: 50px;
+}
+
+
+.autoFill > p > label {
+    color: #3d3d3d;
+    font-weight: 500;
+    margin-bottom: 0px;
+}
+
+.autoFill > p > a {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 5px 27px;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+.autoFill > p > a:hover {
+    background-color: #358338; /* Green */
+    color: mistyrose;
+}
+
+.formAmountClass {
+    background-color: lemonchiffon;
+}
+
+.formOther {
+    overflow:hidden;
+    margin:10px;
+    margin-top: 0px;
+}
+
+/*  
+OTHER
+
+*/
+
+.formAndSubmit * {
+    padding: 0px;
+    margin: 0px;
+    max-width: 400px;
+}
+
+.formRow {
+    overflow:hidden;
+    display: inline;
+    width: 100%;
+    height: 200px;
+}
+.formLabel {
+    max-width: 200px;
+    background-color: paleturquoise;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    float: left;
+}
+
+.formInput {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    float: right;
+}
+
+.formInput > input {
+    width: 100px;
 }
