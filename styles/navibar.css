@@ -41,16 +41,10 @@ nav, .togglerBar {
 }
 
 
-.NaviList>a:hover,.NaviList>a>a:hover, .togglerBar>a:hover {
-    transition: all 0.2s ease-in-out;
-    color: #797878;
-}
-
 .NaviList>a, .togglerBar>a {
     color: #FFFFFF;
     text-decoration: none;
-    margin-right: 20px;
-    font-size: 40px;
+    font-size: 35px;
     cursor: pointer;
 }
 
@@ -63,7 +57,6 @@ nav, .togglerBar {
     .langMain {
         position: absolute;
         right: 5px;
-        width: 130px;
     }
     .langMain>a {
         color: rgb(0, 0, 0) !important;
@@ -73,6 +66,10 @@ nav, .togglerBar {
     }
     .NaviList:hover {
         background-color: rgba(0, 0, 0, 0.322);
+    }
+    .NaviList>a:hover,.NaviList>a>a:hover, .togglerBar>a:hover {
+        transition: all 0.2s ease-in-out;
+        color: #cacaca;
     }
 }
 
@@ -94,6 +91,10 @@ nav, .togglerBar {
         text-align: center;
         margin-right: 0px;
         padding: 10px 0;
+    }
+    .NaviList>a:hover,.NaviList>a>a:hover, .togglerBar>a:hover {
+        transition: all 0.2s ease-in-out;
+        color: #797878;
     }
 }
 

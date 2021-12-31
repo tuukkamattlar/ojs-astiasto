@@ -12,7 +12,7 @@ export default function Home(props) {
 
   return (
     <>
-    <div className='mainContentClass'>
+    <div className='mainContentClass contentIndex'>
       
       <h3>Kun tiskaat</h3>
       <p>

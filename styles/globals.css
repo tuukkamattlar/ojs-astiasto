@@ -55,8 +55,12 @@ input[type=number] {
   max-width: 1400px;
   overflow: hidden;
   width: 100%;
-
 }
+
+.contentIndex{
+  max-width: 1000px;
+}
+
 .mainContentClass * {
   margin: 20px;
   margin-top: 50px;
