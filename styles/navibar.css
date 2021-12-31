@@ -18,9 +18,6 @@ nav, .togglerBar {
     align-items: center;
 }
 
-.NaviList:hover {
-    background-color: rgba(0, 0, 0, 0.322);
-}
 
 .togglerBar {
     display: flex;
@@ -74,12 +71,15 @@ nav, .togglerBar {
     .langMain>a:hover {
         color: rgba(0, 0, 0, 0.521) !important;
     }
+    .NaviList:hover {
+        background-color: rgba(0, 0, 0, 0.322);
+    }
 }
 
 
 @media screen and (max-width: 800px){
     .togglerBar {
-        background-color: rgba(0, 0, 0, 0.233);
+        background-color: rgba(0, 0, 0, 0.411);
     }
     .NaviList {
         background-color: rgba(0, 0, 0, 0.877);
