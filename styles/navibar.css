@@ -18,6 +18,10 @@ nav, .togglerBar {
     align-items: center;
 }
 
+.NaviList:hover {
+    background-color: rgba(0, 0, 0, 0.322);
+}
+
 .togglerBar {
     display: flex;
     text-align: center;
@@ -33,7 +37,7 @@ nav, .togglerBar {
     color: #FFFFFF;
     text-decoration: none;
     margin-right: 20px;
-    font-size: 20px;
+    font-size: 30px;
     cursor: pointer;
     padding-left: 15px;
     padding-right: 15px;
@@ -49,7 +53,7 @@ nav, .togglerBar {
     color: #FFFFFF;
     text-decoration: none;
     margin-right: 20px;
-    font-size: 30px;
+    font-size: 40px;
     cursor: pointer;
 }
 

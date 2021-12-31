@@ -49,14 +49,14 @@ export default function About(props) {
   return (
     <div className='mainContentClass'>
       <div className='astiastoInfo'>
-        <h2>
+        <h1>
           Astiasto
-        </h2>
+        </h1>
         <p>
           Astiaston hintoihin kuuluu....
         </p>
       </div>
-    <h2>Astiaston sisältö</h2>
+    <h1>Astiaston sisältö</h1>
     <div className='itemClass'>
       <h3>Lasit</h3>
       {itemClass('glass')}
