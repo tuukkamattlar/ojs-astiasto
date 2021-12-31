@@ -111,19 +111,35 @@ nav, .togglerBar {
     width: 23px;
 }
 
+.navButton:hover .bar1{
+    width: 35px !important;
+    -webkit-transition: width 0.5s ease-in-out;
+    -moz-transition: width 0.5s ease-in-out;
+    -o-transition: width 0.5s ease-in-out;
+    transition: width 0.5s ease-in-out;
+}
+.navButton:hover .bar2{
+    width: 35px !important;
+    -webkit-transition: width 0.5s ease-in-out;
+    -moz-transition: width 0.5s ease-in-out;
+    -o-transition: width 0.5s ease-in-out;
+    transition: width 0.5s ease-in-out;
+}
+
+
 .bar1C {
-    width: 40px;
-    height: 5px;
+    width: 35px;
+    height: 2px;
     background-color: rgb(201, 201, 201);
-    margin: 16px 0;
+    margin: 20px 0;
     -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
     transform: rotate(-45deg) translate(-9px, 6px) ;
 }
 
 
 .bar3C {
-    width: 40px;
-    height: 5px;
+    width: 35px;
+    height: 2px;
     background-color: rgb(201, 201, 201);
     margin: 0px 0;
     -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
