@@ -23,7 +23,6 @@ input[type=number] {
 .allContent {
   margin: auto;
   width: 100%;
-  max-width: 1500px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -42,6 +41,8 @@ input[type=number] {
   padding-left: 10px;
   padding-right: 10px;
   text-align: center;
+  margin: auto;
+  max-width: 1500px;
 
 }
 .mainContentClass * {
