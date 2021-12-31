@@ -1,132 +1,44 @@
 html,
 body {
-  padding: 0;
-  margin: 0;
+  padding: 0px;
+  margin: 0px;
   position:absolute;
-  top:0px;
+  width: 100%;
+  height: 100%;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
     Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
-
-html, body {
-  width: 90vh;
+.allContent {
+  margin: auto;
   width: 100%;
-}
-
-@media screen and (min-width: 600px) {
-  #__next {
-    position:relative;
-    width: 100vh !important;
-    margin: auto! important;
-  }
-}
-
-@media screen and (max-width: 601px) {
-  #__next {
-    position:relative;
-    margin: auto! important;
-  }
-}
-
-
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-
-.mainClass {
-  position: relative;
   max-width: 1500px;
-  margin: auto! important;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.naviClass {
-  position:absolute;
-  top:0px;
-  left:0;
-  width:100% !important;
-  margin: auto;
+.naviBar {
+  background-color: slategrey;
+  position: relative;
+  display: inline;
+  height: 60px;
 }
 
-.contentClass {
-  padding: 10px;
-  width:100% !important;
-  margin: auto;
-}
-
-/* Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
-}
-
-.lasit {
-  background-color: rgba(95, 158, 160, 0.267);
-  padding: 15px;
-}
-
-.lautaset {
-  background-color: rgba(255, 127, 80, 0.178);
-  padding: 15px;
-}
-
-
-.aterimet {
-  background-color: rgba(107, 107, 107, 0.178);
-  padding: 15px;
-}
-
-.contact {
-  padding: 20px;
-}
-
-.formRow {
-  margin: auto;
-  display: table;
-  padding-top: 10px;
-}
-
-.formName {
-  padding-left: 20px;
-  float: right;
-  width: 300px;
-  
-}
-
-.formInput {
-  float: left;
-  width: 60px;
-}
-
-.formAndSubmit {
-
-}
-
-.formClass {
-  float: left;
-  width: 70%;
-  min-width: 500px;
+.mainContentClass {
+  padding-top: 20px;
   padding-bottom: 20px;
-}
-
-.formClass>div {
-  padding: auto;
-}
-
-.submitClass {
-  margin-top: 20px;
-  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
   text-align: center;
+
+}
+.mainContentClass * {
+  margin: 20px;
+  margin-top: 50px;
 }
 
-.bottom{
-  height: 50px;
-}
-
-
-.autoFill {
-  padding: 30px;
-  background-color: rgba(255, 217, 0, 0.185);
+.contactFooter {
+  background-color: rgb(163, 163, 163);
+  margin-top: auto;
+  text-align: center;
 }

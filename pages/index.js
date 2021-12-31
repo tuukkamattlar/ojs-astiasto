@@ -6,10 +6,15 @@ import NavDropdown from 'react-bootstrap/NavDropdown'
 import Container from 'react-bootstrap/Container'
 import { useState } from 'react'
 import OrderForm from '../components/Form'
+import HomePage from '@components/HomePage'
+import AboutPage from '@components/AboutPage'
+import mainPhoto from '../public/img/we.jpg'
+import Image from 'next/image'
 
 
-export default function Home() {
-  const [language, setLanguage] = useState('FI')
+export default function Home(props) {
+  let lan = props.language
+  //const [language, setLanguage] = useState('FI')
   const SiteName = {'FI': 'OJS astiasto','EN': 'OJS tableware'}
   const HomeName = {'FI': 'Koti','EN': 'Home'}
   const AboutName = {'FI': 'Astiastosta','EN': 'About'}
@@ -17,55 +22,15 @@ export default function Home() {
   const InfoName = {'FI': 'Tällä sivustolla voit tilata astiat','EN': 'By using this form you can order tableware'}
 
   return (
-    <div>
-      <Head>
-        <title>OJS astiastotilaus</title>
-        <link rel="icon" href="/ojsicon.ico" />
-        <script src="https://unpkg.com/react/umd/react.production.min.js" crossorigin></script>
-        <script
-          src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"
-          crossorigin></script>
-        <script
-          src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js"
-          crossorigin></script>
-        <script>var Alert = ReactBootstrap.Alert;</script>
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-          crossorigin="anonymous"
-        />
-      </Head>
-      <main className="mainClass">
-        <div className="naviClass">
-          <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className="navi">
-            <Container>
-            <Navbar.Brand href="/">{SiteName[language]}</Navbar.Brand>
-            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-            <Navbar.Collapse id="responsive-navbar-nav">
-              <Nav className="me-auto">
-                <Nav.Link href="/">{HomeName[language]}</Nav.Link>
-                <Nav.Link href="/about">{AboutName[language]}</Nav.Link>
-              </Nav>
-              <Nav>
-                <NavDropdown title={language} id="navbarScrollingDropdown">
-                  <NavDropdown.Item onClick={() => setLanguage('EN')}>EN</NavDropdown.Item>
-                  <NavDropdown.Item onClick={() => setLanguage('FI')}>FI</NavDropdown.Item>
-                </NavDropdown>
-              </Nav>
-            </Navbar.Collapse>
-            </Container>
-          </Navbar>
-        </div>
-        <div className="contentClass">
-          <Header title={WelcomeName[language]} />
-          <p>
-            {InfoName[language]}
-          </p>
-          <OrderForm language={language}/>
-        </div>
-      </main>
-
+    <div className='mainContentClass'>
+      <h3>Kun tiskaat</h3>
+      <p>
+        {props.loremIpsum}
+      </p>
+      <Image src={mainPhoto} />
+      <p>
+        {props.loremIpsum}
+      </p>
     </div>
   )
 }

@@ -161,7 +161,7 @@ export default function OrderForm(props) {
 
 
   return (
-    <>
+    <div className='formClass'>
       <h2>{HeadName[lan]}</h2>
       <Form name="contact" action="/" onSubmit={event => handleSubmit(event)} method="POST" data-netlify="true" >
       <input type="hidden" name="form-name" value="contact" />
@@ -302,6 +302,6 @@ export default function OrderForm(props) {
       </Form>
       <div className="bottom">
       </div>
-    </>
+    </div>
   )
 }
