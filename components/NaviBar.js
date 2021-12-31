@@ -65,7 +65,7 @@ export default function NaviBar(props) {
       }
     if (toggleMenu) {
           return(
-            <ul className='NaviList' onClick={()=>setToggleMenu(false)}>
+            <ul className='NaviList burgerAnimate' onClick={()=>setToggleMenu(false)}>
                 <Link href="/" >
                     {SiteName[lan]}
                 </Link>

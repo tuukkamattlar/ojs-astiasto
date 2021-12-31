@@ -39,8 +39,10 @@ nav, .togglerBar {
     padding-right: 15px;
 }
 
+
 .NaviList>a:hover,.NaviList>a>a:hover, .togglerBar>a:hover {
-    color: #b6b6b6;
+    transition: all 0.2s ease-in-out;
+    color: #797878;
 }
 
 .NaviList>a, .togglerBar>a {
