@@ -1,0 +1,32 @@
+.astiastoInfo{
+    color: rgb(0, 0, 0);
+}
+
+.itemClass {
+    margin: 0px;
+    padding: 0px;
+}
+
+.itemClass * {
+    margin: 5px;
+    padding: 0px;
+}
+
+.itemGrid {
+    padding-top: 10px;
+}
+
+.aboutCard {
+    height: 300px;
+    width: 200px;
+    display: inline-block;
+    border-radius: 4px;
+}
+.aboutCard:hover {
+    background-color: rgba(0, 0, 0, 0.096)
+}
+
+.aboutCard * {
+    margin: 0px;
+    margin-top: 10px;
+}

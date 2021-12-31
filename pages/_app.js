@@ -7,6 +7,7 @@ import useWindowDimensions from "functions/windowSize"
 import '../styles/globals.css'
 import '../styles/navibar.css'
 import '../styles/form.css'
+import '../styles/about.css'
 
 function Application({ Component, pageProps }) {
 
