@@ -17,11 +17,8 @@ export default function About(props) {
 
         <Image src={mainPhoto} height='170' width='160' className='itemPic' />
         <h5>
-          {astiastoItems[val][lan]}
+          {astiastoItems[val][lan]} {astiastoItems[val].SIZE}
         </h5>
-        <h7>
-          {astiastoItems[val].SIZE}
-        </h7>
         <p>
           {astiastoItems[val].PRICE} €/{kplPc[lan]}, (max. {astiastoItems[val].MAXNRO})
         </p>

@@ -125,7 +125,6 @@
         max-width: 350px;
         width: 100%;
         float:left; 
-        background-color: rgb(206, 206, 206);
         border-radius: 4px;
         margin-left: 0px;
     }
@@ -158,6 +157,9 @@
         padding: 5px !important;
     }
 
+    .autoFill {
+        max-width: 500px;
+    }
 
 }
 
@@ -215,7 +217,8 @@
     background-color: #4CAF50; /* Green */
     border: none;
     color: white;
-    padding: 5px 27px;
+    font-size: 20px;
+    padding: 7px 27px;
     border-radius: 4px;
     text-align: center;
     text-decoration: none;
@@ -223,8 +226,8 @@
     cursor: pointer;
 }
 .autoFill > p > a:hover {
-    background-color: #358338; /* Green */
-    color: mistyrose;
+    background-color: #358338c9; /* Green */
+    color: rgb(255, 255, 255) !important;
 }
 
 .formOther {
@@ -249,7 +252,6 @@ OTHER
 }
 .formInputsNumber{
     padding-top: 10px;
-    background-color: rgb(245, 245, 245);
 }
 
 
@@ -263,7 +265,7 @@ OTHER
 }
 
 .formRow > li > a {
-    padding-left: 15px;
+    padding-left: 5px;
 }
 
 .formRow > li {
@@ -282,6 +284,7 @@ OTHER
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
+    max-width: 300px;
 }
 .submitButton >button:hover {
     background-color: #358338; /* Green */
@@ -289,5 +292,19 @@ OTHER
 }
 
 .alertInfo {
-    color: rgb(204, 5, 5);
+    font-size: 30px;
+    margin: 10px;
+    background-color: #af0505; /* Green */
+    border: none;
+    color: white;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    max-width: 350px;
+}
+
+.alertInfo:hover {
+    background-color: rgb(114, 114, 114);
 }

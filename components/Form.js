@@ -94,6 +94,9 @@ export default function OrderForm(props) {
     if(nro>0){
       Object.keys(order).forEach( function(val){
         // TODO: suosittele optimimäärää vesikannuja
+        if(val === 'creamItem' || val === 'WaterJug'){
+          nro  = 1+parseInt(nro/7)
+        }
         let newSet = order[val]
         if(nro<=order[val].MAXNRO){
           newSet.ORDER = nro
@@ -154,7 +157,7 @@ function ItemLister(val, ind){
   return(
     <li>
       <input type="number" name={order[val].FI} value={order[val].ORDER} onInput={e => setValue(val,e)}/>
-      <a>{order[val][lan]}, {order[val].SIZE}, max. {order[val].MAXNRO} </a>
+      <a>{order[val][lan]} {order[val].SIZE}</a>
   </li>
   )
 }

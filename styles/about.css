@@ -17,6 +17,7 @@
 }
 
 .aboutCard {
+    vertical-align: top;
     height: 300px;
     width: 200px;
     display: inline-block;
