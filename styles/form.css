@@ -21,30 +21,22 @@
     padding: 10px;
  }
 
+ form {
+    max-width: 100%;
+    padding: 0px !important;
+    margin: 0px !important;
+}
 
 
 @media screen and (max-width: 1050px) {
     .formContact { 
-     float: none;
+     float: inherit;
      margin-right:0;
      width:auto;
-     border:0; 
      padding: 0px;
-       margin: 0px;
+     margin: 0px;
    }
    .formClass{
-       width: 100%;
-       padding: 0px;
-       margin: 0px;
-   }
-   form {
-       width: 100%;
-
-       padding: 0px !important;
-       margin: 0px !important;
-   }
-
-   .formWrapper {
        width: 100%;
        padding: 0px;
        margin: 0px;
@@ -60,9 +52,9 @@
        padding: 0px!important;
    }
    .formAmountClass{
-    width: 100%;
-    margin: 0px!important;
-    padding: 0px!important;
+        width: 100%;
+        margin: 0px!important;
+        padding: 0px!important;
     }
 
     .formInputsNumber{
@@ -82,36 +74,13 @@
         padding-top: 10px;
         padding-left: 20px;
     }
-    
-    .submitClass {
-        width: 100%;
-        border-radius: 4px;
-        padding: 5px;
-    }
 
-    .submitClass * {
-        margin: 10px;
-    }
-    .submitClass {
-        width: 100%;
-        border-radius: 4px;
-        padding: 0px !important;
-        margin: 0px !important;
-    }
-
-    .submitClass * {
-        margin: 5px !important;
-        padding: 0px !important;
-        width: 100%;
-    }
-
-    .submitClass>div,h5,p {
-        margin: 0px !important;
-        padding: 0px !important;
+    .submitClass>div,.submitClass>h5,.submitClass>p {
+        margin: 0px;
+        padding: 0px;
+        margin-bottom: 8px;
         width: 100% !important;
     }
-
-
 }
 
 @media screen and (min-width: 1050px) {
@@ -128,28 +97,12 @@
         border-radius: 4px;
         margin-left: 0px;
     }
-    .formWrapper {
-        width: 100%;
-    }
     .formRow{
         list-style-type:none;
         text-align: left;
         list-style-position: inside;
         padding-top: 10px;
         padding-left: 20px;
-    }
-    
-    .submitClass {
-        width: 100%;
-        border-radius: 4px;
-        padding: 0px !important;
-        margin: 0px !important;
-    }
-
-    .submitClass * {
-        margin: 10px;
-        padding: 10px;
-        width: 100%;
     }
 
     .submitClass>div,h5,p {
@@ -163,7 +116,17 @@
 
 }
 
+.submitClass * {
+    margin: 10px;
+    padding: 10px;
+    max-width: 100%;
+}
+.submitClass {
 
+    border-radius: 4px;
+    padding: 0px !important;
+    margin: 0px !important;
+}
  
 .formContact >input,textarea, .autoFill > p > input {
     border: 1px solid #d9d9d9;
@@ -275,7 +238,8 @@ OTHER
 
 .submitButton > button {
     font-size: 30px;
-    margin: 10px;
+    margin: 0px !important;
+    padding: 0px !important;
     background-color: #2e8531; /* Green */
     border: none;
     color: white;
@@ -293,7 +257,7 @@ OTHER
 
 .alertInfo {
     font-size: 30px;
-    margin: 10px;
+    margin: 0px;
     background-color: #af0505; /* Green */
     border: none;
     color: white;
