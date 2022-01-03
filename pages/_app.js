@@ -36,9 +36,6 @@ function Application({ Component, pageProps }) {
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
           crossOrigin="anonymous"
         />
-        <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-        </style>
       </Head>
       <div className='allContent'>
         <div className='NaviClassMain'>

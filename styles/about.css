@@ -28,6 +28,13 @@
     transition: all 0.2s ease;
 }
 
+.aboutCard:hover {
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    filter: grayscale(0%);
+    transition: all 0.2s ease;
+}
+
 .aboutCard> * {
     margin: 1px !important;
     padding: 2px !important;

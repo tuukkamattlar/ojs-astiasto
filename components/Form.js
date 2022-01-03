@@ -158,7 +158,7 @@ export default function OrderForm(props) {
 
 function ItemLister(val, ind){
   return(
-    <li>
+    <li key={val}>
       <input type="number" name={order[val].FI} value={order[val].ORDER} onInput={e => setValue(val,e)}/>
       <a>{order[val][lan]} {order[val].SIZE}</a>
   </li>
