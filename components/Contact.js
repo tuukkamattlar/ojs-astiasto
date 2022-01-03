@@ -9,7 +9,7 @@ export default function Contact(props) {
 
     return (
     <div className='contactFooter'>
-        <p>{contactInfoRow3[lan]} (2775054-9) </p>
+        <p>{contactInfoRow3[lan]}, 2775054-9 </p>
         <p>{contactInfoRow2[lan]}</p>
         <p>astiasto@ojs.fi</p>
     </div>

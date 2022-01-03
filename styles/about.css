@@ -8,8 +8,8 @@
 }
 
 .itemClass * {
-    margin: 5px;
-    padding: 5px;
+    margin: 2px;
+    padding: 1px;
 }
 
 .itemGrid {
@@ -19,7 +19,7 @@
 .aboutCard {
     vertical-align: top;
     height: 300px;
-    width: 200px;
+    width: 250px;
     display: inline-block;
     border-radius: 4px;
     -webkit-filter: grayscale(80%);
@@ -27,14 +27,14 @@
     filter: grayscale(80%);
     transition: all 0.2s ease;
 }
-.aboutCard:hover {
-    -webkit-filter: grayscale(0%);
-   -moz-filter: grayscale(0%);
-   filter: grayscale(0%);
-    background-color: rgba(0, 0, 0, 0.096);
+
+.aboutCard> * {
+    margin: 1px !important;
+    padding: 2px !important;
 }
 
-.aboutCard * {
-    margin: 0px;
-    margin-top: 10px;
+.extraRowAbout {
+    margin-top: 0px;
+    color: rgb(104, 104, 104);
+    font-size: 15px !important;
 }

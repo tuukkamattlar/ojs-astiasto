@@ -47,7 +47,7 @@ export default function NaviBar(props) {
 }
   
   function showNavBar(){
-      if(width > 800){
+      if(width > 1000){
           return(
             <ul className='NaviList'>
               <Link href="/" >

@@ -94,17 +94,18 @@ export default function OrderForm(props) {
     if(nro>0){
       Object.keys(order).forEach( function(val){
         // TODO: suosittele optimimäärää vesikannuja
+        const nroInput = nro
         if(val === 'creamItem' || val === 'WaterJug'){
-          nro  = 1+parseInt(nro/7)
+          nroInput  = 1+parseInt(nro/7)
         }
         let newSet = order[val]
-        if(nro<=order[val].MAXNRO){
-          newSet.ORDER = nro
+        if(nroInput<=order[val].MAXNRO){
+          newSet.ORDER = nroInput
           setOrder(prevState => ({
             ...prevState,
             [val]: newSet
           }))        
-        } else if (nro>order[val].MAXNRO){
+        } else if (nroInput>order[val].MAXNRO){
             newSet.ORDER = order[val].MAXNRO
             setOrder(prevState => ({
               ...prevState,

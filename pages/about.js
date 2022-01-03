@@ -22,6 +22,9 @@ export default function About(props) {
         <p>
           {astiastoItems[val].PRICE} €/{kplPc[lan]}, (max. {astiastoItems[val].MAXNRO})
         </p>
+        <p className="extraRowAbout">
+        {astiastoItems[val]["O".concat(lan)]}
+        </p>
       </div>
     )
   }
