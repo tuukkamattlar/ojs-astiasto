@@ -239,7 +239,7 @@ OTHER
 .submitButton > button {
     font-size: 30px;
     margin: 0px !important;
-    padding: 0px !important;
+    padding: 10px !important;
     background-color: #2e8531; /* Green */
     border: none;
     color: white;
