@@ -87,7 +87,9 @@ export default function NaviBar(props) {
         return(
             <>
                 <div className='togglerBar'>
-                    <a className='siteName'>{SiteName[lan]}</a>
+                  <Link href="/" >
+                    {SiteName[lan]}
+                  </Link>
                     <a className='burgerButton'>
                     {burgerButton()}
                     </a>
