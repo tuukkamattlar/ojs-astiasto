@@ -73,12 +73,9 @@ input[type=number] {
   margin-top: 50px;
 }
 
-.contactMain{
-  background-color: violet;
-}
 
 .contactFooter {
-  background-color: rgb(163, 163, 163);
+  background-color: rgb(209, 209, 209);
   padding-top: 10px;
   min-height: 100px;
   margin-top: auto;

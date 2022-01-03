@@ -11,7 +11,6 @@ export default function Contact(props) {
     <div className='contactFooter'>
         <p>{contactInfoRow3[lan]}, 2775054-9 </p>
         <p>{contactInfoRow2[lan]}</p>
-        <p>astiasto@ojs.fi</p>
     </div>
     )
   }

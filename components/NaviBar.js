@@ -1,6 +1,7 @@
 import Link from "next/link"
 import React, {useState, useEffect} from 'react'
 import useWindowDimensions from "functions/windowSize"
+import ReactCSSTransitionGroup from 'react-transition-group'
 
 
 export default function NaviBar(props) {
@@ -65,22 +66,23 @@ export default function NaviBar(props) {
       }
     if (toggleMenu) {
           return(
-            <ul className='NaviList burgerAnimate' onClick={()=>setToggleMenu(false)}>
-                <Link href="/" >
-                    {SiteName[lan]}
-                </Link>
-                <Link href="/about" onClick={()=>setToggleMenu(false)} >
-                    {AboutName[lan]}
-                </Link>
-                <Link href="/order" onClick={()=>setToggleMenu(false)} >
-                    {FormName[lan]}
-                </Link>
-                {langButton()}
-                <a>
-                    {burgerButtonClose()}
-                </a>
-
-            </ul>
+              <div>
+                <ul className='NaviList' onClick={()=>setToggleMenu(false)}>
+                  <Link href="/" >
+                      {SiteName[lan]}
+                  </Link>
+                  <Link href="/about" onClick={()=>setToggleMenu(false)} >
+                      {AboutName[lan]}
+                  </Link>
+                  <Link href="/order" onClick={()=>setToggleMenu(false)} >
+                      {FormName[lan]}
+                  </Link>
+                  {langButton()}
+                  <a>
+                      {burgerButtonClose()}
+                  </a>
+              </ul>
+            </div>
           )
       }
       if (!toggleMenu) {
