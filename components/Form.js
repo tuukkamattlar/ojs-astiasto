@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
 import AstiastoData from "../astiasto.json"
+import DatePicker from "react-datepicker";
 
 export default function OrderForm(props) {
   let lan = props.language
@@ -40,6 +41,7 @@ export default function OrderForm(props) {
   const [address, setAddress] = useState('')
   const [dateTime, setDateTime] = useState('')
   const [preCalc, setPreCalc] = useState(0)
+  const [startDate, setStartDate] = useState('')
   
   function clearAll() {
     setOrder(AstiastoData)

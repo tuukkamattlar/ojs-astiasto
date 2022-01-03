@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Head from 'next/head'
 import useWindowDimensions from "functions/windowSize"
 
+
 import '../styles/globals.css'
 import '../styles/navibar.css'
 import '../styles/form.css'
@@ -21,19 +22,19 @@ function Application({ Component, pageProps }) {
       <Head>
         <title>OJS astiastotilaus</title>
         <link rel="icon" href="/ojsicon.ico" />
-        <script src="https://unpkg.com/react/umd/react.production.min.js" crossorigin></script>
+        <script src="https://unpkg.com/react/umd/react.production.min.js" crossOrigin="true"></script>
         <script
           src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"
-          crossorigin></script>
+          crossOrigin="true"></script>
         <script
           src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js"
-          crossorigin></script>
+          crossOrigin="true"></script>
         <script>var Alert = ReactBootstrap.Alert;</script>
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-          crossorigin="anonymous"
+          crossOrigin="anonymous"
         />
         <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
