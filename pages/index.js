@@ -19,9 +19,6 @@ export default function Home(props) {
         {props.loremIpsum}
       </p>
       <Image src={mainPhoto} />
-      <p>
-        {props.loremIpsum}
-      </p>
     </div>
     </>
 

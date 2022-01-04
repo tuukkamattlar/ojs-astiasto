@@ -21,9 +21,6 @@ export default function Form(props) {
 
   return (
     <div className='mainContentClass'>
-      <p>
-        {props.loremIpsum}
-      </p>
       <OrderForm language={lan}/>
     </div>
   )
