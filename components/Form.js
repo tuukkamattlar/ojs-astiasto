@@ -74,10 +74,9 @@ export default function OrderForm(props) {
       body: bodySend
     })
       .then(
-        alert('All good')
         )// THEN TODO
       .catch(error => alert(error));
-      window.location = '/';
+      window.location = '/thankyou/'.concat(encodeURIComponent(kiltaYhdistys.replace('/', '')));
     e.preventDefault();
   };
 
@@ -167,7 +166,6 @@ function ItemLister(val, ind){
 }
 
 function setInvTypeF(input) {
-  console.log('hih')
   setInvType(input)
 }
 

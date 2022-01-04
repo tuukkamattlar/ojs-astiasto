@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+<?xml-stylesheet href="Finvoice.xsl" type="text/xsl"?>
+<Finvoice Version="3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Finvoice3.0.xsd">
+  <BuyerPartyDetails>  
+	<BuyerPartyIdentifier>69420</BuyerPartyIdentifier>
+    <BuyerOrganisationName>BOTTI-KAYTTAJA</BuyerOrganisationName>
+    <BuyerOrganisationTaxCode>FILL_IN</BuyerOrganisationTaxCode>
+    <BuyerPostalAddressDetails>
+      <BuyerStreetName>FILL_IN</BuyerStreetName>
+      <BuyerTownName>FILL_IN</BuyerTownName>
+      <BuyerPostCodeIdentifier>FILL_IN</BuyerPostCodeIdentifier>
+	  <CountryCode>FI</CountryCode>
+      <CountryName>Suomi</CountryName>
+    </BuyerPostalAddressDetails>
+  </BuyerPartyDetails>
+  <DeliveryDetails>
+    <DeliveryDate Format="CCYYMMDD">FILL_IN</DeliveryDate>
+  </DeliveryDetails>
+  <InvoiceDetails>
+    <InvoiceTypeCode>INV01</InvoiceTypeCode>
+    <InvoiceTypeCodeUN>380</InvoiceTypeCodeUN>
+    <InvoiceTypeText>Invoice</InvoiceTypeText>  
+    <OriginCode>Original</OriginCode>
+    <InvoiceDate Format="CCYYMMDD">FILL_IN</InvoiceDate>
+    <RowsTotalVatExcludedAmount AmountCurrencyIdentifier="EUR">80,00</RowsTotalVatExcludedAmount>
+    <InvoiceTotalVatExcludedAmount AmountCurrencyIdentifier="EUR">80,00</InvoiceTotalVatExcludedAmount>
+    <InvoiceTotalVatAmount AmountCurrencyIdentifier="EUR">19,20</InvoiceTotalVatAmount>
+    <InvoiceTotalVatIncludedAmount AmountCurrencyIdentifier="EUR">99,20</InvoiceTotalVatIncludedAmount>
+    <VatSpecificationDetails>
+      <VatBaseAmount AmountCurrencyIdentifier="EUR">80,00</VatBaseAmount>
+      <VatRatePercent>24,00</VatRatePercent>
+      <VatCode>S</VatCode>
+      <VatRateAmount AmountCurrencyIdentifier="EUR">19,20</VatRateAmount>
+    </VatSpecificationDetails>
+    <PaymentTermsDetails>
+      <InvoiceDueDate Format="CCYYMMDD">20220130</InvoiceDueDate>
+      <PaymentOverDueFineDetails>
+        <PaymentOverDueFineFreeText>Viiv�styskorko</PaymentOverDueFineFreeText>
+        <PaymentOverDueFinePercent>7,5</PaymentOverDueFinePercent>
+      </PaymentOverDueFineDetails>
+    </PaymentTermsDetails>
+  </InvoiceDetails>
+  <InvoiceRow>
+    <ArticleIdentifier>1020201</ArticleIdentifier>
+    <ArticleName>Lautanen iso laakea</ArticleName>
+    <InvoicedQuantity QuantityUnitCode="kpl" QuantityUnitCodeUN="C62">200</InvoicedQuantity>
+	  <UnitPriceAmount AmountCurrencyIdentifier="EUR">0,20</UnitPriceAmount>
+    <RowPositionIdentifier>1</RowPositionIdentifier>
+    <RowVatRatePercent>24,00</RowVatRatePercent>
+    <RowVatCode>S</RowVatCode>
+    <RowVatExcludedAmount AmountCurrencyIdentifier="EUR">40,00</RowVatExcludedAmount>
+  </InvoiceRow>
+    <InvoiceRow>
+    <ArticleIdentifier>1030201</ArticleIdentifier>
+    <ArticleName>Ruokaveitsi+haarukka</ArticleName>
+    <InvoicedQuantity QuantityUnitCode="kpl" QuantityUnitCodeUN="C62">200</InvoicedQuantity>
+    <UnitPriceAmount AmountCurrencyIdentifier="EUR">0,20</UnitPriceAmount>
+    <RowPositionIdentifier>2</RowPositionIdentifier>
+    <RowVatRatePercent>24,00</RowVatRatePercent>
+    <RowVatCode>S</RowVatCode>
+    <RowVatExcludedAmount AmountCurrencyIdentifier="EUR">40,00</RowVatExcludedAmount>
+  </InvoiceRow>
+</Finvoice>

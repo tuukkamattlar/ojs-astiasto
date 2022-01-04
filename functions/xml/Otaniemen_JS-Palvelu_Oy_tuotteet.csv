@@ -1,0 +1,40 @@
+Otaniemen JS-Palvelu Oy;Tuotteet
+
+Koodi;Nimi;Nimi EN;Nimi SV;Selite;Myyntihinta;Yks.;Tili;Hankintahinta;ALV;Hinta sis. ALV
+1010101;Kuohuviinilasi;;;;0,25;kpl;3000;0,00;24;0
+1010102;Kuohuviinijäähdytin;;;;4,00;kpl;3000;0,00;24;0
+1010201;Vesilasi 36 cl;;;;0,10;kpl;3000;0,00;24;0
+1010301;Viinilasi 30 cl;;;;0,25;kpl;3000;0,00;24;0
+1010401;Viinilasi 37 cl;;;;0,25;kpl;3000;0,00;24;0
+1010501;Aromilasi;;;;0,10;kpl;3000;0,00;24;0
+1010601;Snapsilasi;;;;0,10;kpl;3000;0,00;24;0
+1010701;Olutlasi;;;kpl;0,69;;3000;0,00;24;0
+1020101;Lautanen syvä;;;;0,20;kpl;3000;0,00;24;0
+1020201;Lautanen iso laakea;;;;0,20;kpl;3000;0,00;24;0
+1020301;Lautanen pieni kolmio;;;;0,12;kpl;3000;0,00;24;0
+1030101;Ruokalusikka;;;;0,10;kpl;3000;0,00;24;0
+1030201;Ruokaveitsi+haarukka;;;;0,20;kpl;3000;0,00;24;0
+1030301;Alkuruokavälineet;;;;0,20;kpl;3000;0,00;24;0
+1030401;Jälkiruokahaarukka+lusikka;;;;0,19;kpl;3000;0,00;24;0
+1040101;Vesikannu;;;;0,79;kpl;3000;0,00;24;0
+1040201;Kermakko;;;;0,61;kpl;3000;0,00;24;0
+1090101;Kahvikuppi+tassi+lusikka;;;;0,49;kpl;3000;0,00;24;0
+12345;Sisustustaulu;;;;50,00;;;0,00;24;0
+2000001;Jääpalat ltk;;;;5,00;kpl;3000;0,00;24;0
+3000001;Laskutuslisä;;;;4,03;kpl;3000;0,00;24;0
+3000101;Vahingonkorvaus rikkoontumisista alv-0% (AVL 1 §);;;;0,00;;3000;0,00;24;0
+3000102;Käsittelykulu (vahingonkorv.alv24%vast);;;;0,00;;3000;0,00;24;0
+4000001;Jääpalakone (1.050 e 2,5%);Jääpalakone (1.050 e 2,5%);Jääpalakone (1.050 e 2,5%);;26,25;kk;3020;0,00;24;0
+4000002;Hanalaitteisto (1.950 e 2,5%);Hanalaitteisto (1.950 e 2,5%);Hanalaitteisto (1.950 e 2,5%);;48,75;kk;3020;0,00;24;0
+4000003;Astiavalikoima (1.000 e 2,5%);Astiavalikoima (1.000 e 2,5%);Astiavalikoima (1.000 e 2,5%);;25,00;kk;3020;0,00;24;0
+4000102;Linr-hana;;;;50,00;pv;3000;0,00;24;0
+70000014;Pakettiauton käyttö, max 2h;;;;32,26;kpl;3010;0,00;24;0
+7000010;Pakettiauton käyttö, avoin;;;;0,00;kpl;3010;0,00;24;0
+7000012;Pakettiauton käyttö, max 4h;Pakettiauton käyttö, max 4h;Pakettiauton käyttö, max 4h;;40,32;kpl;3010;0,00;24;0
+7000013;Pakettiauton käyttö, max 12h;;;;48,39;kpl;3010;0,00;24;0
+7000019;Pakuvuokra, kons.sis.käyttö;Pakuvuokra, kons.sis.käyttö;Pakuvuokra, kons.sis.käyttö;;250,00;kk;3020;0,00;24;0
+7000020;Pakettiauton käyttö, tankkaamattomuuslisä;;;;0,50;km;3010;0,00;24;0
+9000001;Muu tarvike;;;;5,00;kpl;3000;0,00;24;0
+9000002;Muu myynti / koneet ja kalusto;;;;0,00;kpl;3000;0,00;24;0
+9000003;Muu myynti / pientarvikkeet;;;;0,00;kpl;3000;0,00;24;0
+9000007;Muu myynti / Olutlasi, kadonnut/myyty;;;;4,20;kpl;3000;0,00;24;0

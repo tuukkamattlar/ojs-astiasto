@@ -108,9 +108,9 @@
         padding-left: 20px;
     }
 
-    .submitClass>div,h5,p {
-        margin: 5px !important;
-        padding: 5px !important;
+    .submitClass>div,.submitClass>h5,.submitClass>p {
+        margin: 5px;
+        padding: 5px;
     }
 
     .autoFill {
