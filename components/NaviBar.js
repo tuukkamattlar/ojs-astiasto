@@ -1,7 +1,7 @@
 import Link from "next/link"
 import React, {useState, useEffect} from 'react'
 import useWindowDimensions from "functions/windowSize"
-import ReactCSSTransitionGroup from 'react-transition-group'
+import ReactCountryFlag from "react-country-flag"
 
 
 export default function NaviBar(props) {
@@ -41,8 +41,18 @@ export default function NaviBar(props) {
   function langButton(){
     return(
         <a className='langMain'>
-            <a className='langOpt' onClick={() => setLanguage('FI')}>FI</a>
-            <a className='langOpt' onClick={() => setLanguage('EN')}>EN</a>
+            <a className='langOpt' onClick={() => setLanguage('FI')}>
+              <ReactCountryFlag svg countryCode="FI" style={{
+                    width: '50px',
+                    height: '35px',
+                }} />
+            </a>
+            <a className='langOpt' onClick={() => setLanguage('EN')}>
+              <ReactCountryFlag svg countryCode="GB" style={{
+                    width: '50px',
+                    height: '35px',
+                }} />
+            </a>
         </a>
     )
 }
@@ -87,7 +97,7 @@ export default function NaviBar(props) {
       }
       if (!toggleMenu) {
         return(
-            <>
+              <>
                 <div className='togglerBar'>
                   <Link href="/" >
                     {SiteName[lan]}
@@ -96,7 +106,7 @@ export default function NaviBar(props) {
                     {burgerButton()}
                     </a>
                 </div>
-            </>
+              </>
         )
     }
   }

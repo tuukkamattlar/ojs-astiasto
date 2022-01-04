@@ -52,24 +52,44 @@ nav, .togglerBar {
     position: absolute;
     right: 0px;
 }
+.langMain {
+    padding: 0px !important;
+    margin: 0px !important;
+}
+.langOpt {
+    filter: saturate(20%);
+    margin: 0px !important;
+}
+.langOpt:hover {
+    filter: saturate(100%);
+}
+
+.langOpt>img {
+    border-radius: 5px;
+}
 
 @media screen and (min-width: 1000px){
     .langMain {
         position: absolute;
         right: 5px;
     }
-    .langMain>a {
-        color: rgb(0, 0, 0) !important;
-    }
-    .langMain>a:hover {
-        color: rgba(0, 0, 0, 0.521) !important;
-    }
-    .NaviList:hover {
+    .NaviList {
         background-color: rgba(0, 0, 0, 0.322);
     }
-    .NaviList>a:hover,.NaviList>a>a:hover, .togglerBar>a:hover {
-        transition: all 0.2s ease-in-out;
+    .NaviList>a:hover, .togglerBar>a:hover {
+        transition: all 0.1s ease-in-out;
         color: #cacaca;
+    }
+    /*RM underline from LAN group*/
+    .langMain {
+        text-decoration: none !important;
+    }
+    .NaviList>a:hover,.NaviList>a>a:hover, .togglerBar>a:hover {
+        transition: all 0.1s ease-in-out;
+        color: #cacaca;
+        text-decoration: underline;
+        text-underline-position: below;
+        text-underline-offset: 20px;
     }
 }
 
@@ -100,7 +120,7 @@ nav, .togglerBar {
         color: #FFFFFF;
         text-decoration: none;
         margin-right: 0px;
-        font-size: 25px;
+        font-size: 30px;
         cursor: pointer;
         padding-left: 15px;
         padding-right: 15px;
