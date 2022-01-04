@@ -36,6 +36,9 @@
      padding: 0px;
      margin: 0px;
    }
+   .InvSelector {
+       margin: auto;
+   }
    .formClass{
        width: 100%;
        padding: 0px;
@@ -135,6 +138,31 @@
     padding: 10px;
     max-width: 300px;
     width: 100%;
+}
+
+.InvSelector {
+    padding: 10px;
+    max-width: 300px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.InvSelector>a {
+    border-radius: 5px;
+    display: flexbox;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+.InvNOTSelected:hover {
+    background-color: rgba(7, 231, 44, 0.233);
+}
+
+.InvSelected {
+    background-color: rgb(7, 231, 45);
+}
+.InvNOTSelected {
+    background-color: rgb(236, 236, 236);
 }
 
 .formContact > textarea {

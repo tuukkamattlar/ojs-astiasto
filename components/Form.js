@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
 import AstiastoData from "../astiasto.json"
-import DatePicker from "react-datepicker";
+import ButtonGroup from 'react-bootstrap/ButtonGroup'
 
 export default function OrderForm(props) {
   let lan = props.language
@@ -35,6 +35,7 @@ export default function OrderForm(props) {
 
   const [ordererName, setOrdererName] = useState('')
   const [email, setEmail] = useState('')
+  const [invType, setInvType] = useState('email')
   const [invEmail, setInvEmail] = useState('')
   const [kiltaYhdistys, setKiltaYhdistys] = useState('')
   const [telePuh, setTelePuh] = useState('')
@@ -165,6 +166,33 @@ function ItemLister(val, ind){
   )
 }
 
+function setInvTypeF(input) {
+  console.log('hih')
+  setInvType(input)
+}
+
+function invTypeField() {
+  if(invType === 'email'){
+    return(
+      <>
+        <label>{laskutusEmailField[lan]}</label>
+        <input type="email" name="Laskutus-maili" value={invEmail} onInput={e => setInvEmail(e.target.value)}/>
+      </>
+    )
+  } else {
+    return(
+      <>
+        <label>TODO</label>
+        <input name="Laskutus-maili" value={invEmail} onInput={e => setInvEmail(e.target.value)}/>
+        <label>TODO 2</label>
+        <input name="Laskutus-maili" value={invEmail} onInput={e => setInvEmail(e.target.value)}/>
+      
+      </>
+    )
+  }
+
+}
+
   useEffect(() => {
     totalPrice()
   });
@@ -192,8 +220,14 @@ function ItemLister(val, ind){
         <label>{emailField[lan]}</label>
         <input type="email" name="E-mail" value={email} onInput={e => setEmail(e.target.value)}/>
 
-        <label>{laskutusEmailField[lan]}</label>
-        <input type="email" name="Laskutus-maili" value={invEmail} onInput={e => setInvEmail(e.target.value)}/>
+        <label>Laskutustapa TODO</label>
+        <p className='InvSelector'>
+          <a onClick={() => setInvTypeF('email')} className={ invType === 'email' ? 'InvSelected' : 'InvNOTSelected'}>E-mail</a>
+          <a onClick={() => setInvTypeF('einv')} className={ invType === 'einv' ? 'InvSelected' : 'InvNOTSelected'}>E-inv</a>
+          <a onClick={() => setInvTypeF('fax')} className={ invType === 'fax' ? 'InvSelected' : 'InvNOTSelected'}>Faksi</a>
+        </p>
+
+        {invTypeField()}
 
         <label>{telepuhField[lan]}</label>
           <input type="text" name="Telegram/puh" value={telePuh} onInput={e => setTelePuh(e.target.value)}/>
