@@ -1,9 +1,9 @@
 var convert = require('xml-js');
-import {xmlFile} from './xml/xmlBase.xml'
+import xmlFile from './xml/xmlBase.xml'
 
 
-export default function makeXML() {
-    let modifyXML = xmlFile;
+export default function makeXML(dataToInsert) {
+    var modifyXML = new XMLParser().parseFromString(xmlFile, "application/xml");
     console.log(modifyXML)
     let productRow = 0
 

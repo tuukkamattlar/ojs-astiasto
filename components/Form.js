@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
 import AstiastoData from "../astiasto.json"
-import ButtonGroup from 'react-bootstrap/ButtonGroup'
+//import makeXML from "functions/xml-tool"
 
 export default function OrderForm(props) {
   let lan = props.language
@@ -191,6 +191,12 @@ function invTypeField() {
 
 }
 
+function printXML() {
+  //let xmlData = makeXML(outputOrder)
+  console.log("KUN")
+  alert('Hienosti testattu')
+}
+
   useEffect(() => {
     totalPrice()
   });
@@ -330,6 +336,7 @@ function invTypeField() {
               </p>
             </div>
       </Form>
+      <button onClick={() => printXML()}>TESTINAPPULA :D</button>
     </div>
   )
 }
