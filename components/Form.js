@@ -226,9 +226,9 @@ function printXML() {
 
         <label>Laskutustapa TODO</label>
         <p className='InvSelector'>
-          <a onClick={() => setInvTypeF('email')} className={ invType === 'email' ? 'InvSelected' : 'InvNOTSelected'}>E-mail</a>
-          <a onClick={() => setInvTypeF('einv')} className={ invType === 'einv' ? 'InvSelected' : 'InvNOTSelected'}>E-inv</a>
-          <a onClick={() => setInvTypeF('fax')} className={ invType === 'fax' ? 'InvSelected' : 'InvNOTSelected'}>Faksi</a>
+          <a onClick={() => setInvTypeF('email')} className={ invType === 'email' ? 'InvSelected greenButton' : 'InvNOTSelected'}>E-mail</a>
+          <a onClick={() => setInvTypeF('einv')} className={ invType === 'einv' ? 'InvSelected greenButton' : 'InvNOTSelected'}>E-inv</a>
+          <a onClick={() => setInvTypeF('fax')} className={ invType === 'fax' ? 'InvSelected greenButton' : 'InvNOTSelected'}>Faksi</a>
         </p>
 
         {invTypeField()}
@@ -254,7 +254,7 @@ function printXML() {
               <p>
                 <label>{autoInput[lan]}</label>
                 <input type="number" value={preCalc} onInput={e => setPreCalc(e.target.value)}/>
-                <a onClick={() => setPreset(preCalc)}>{autoInputCalc[lan]}</a>
+                <a className="greenButton" onClick={() => setPreset(preCalc)}>{autoInputCalc[lan]}</a>
               </p>
         </div>
 
@@ -329,9 +329,9 @@ function printXML() {
               <p className='submitButton'>
               {
                 isValid ?
-                <button type="submit"  >{sendField[lan]}</button>
+                <button type="submit greenButton"  >{sendField[lan]}</button>
                 :
-                <h3 className='alertInfo'>Täytä vaadittavat tiedot</h3>
+                <h3 className='alertInfo redButton'>Täytä vaadittavat tiedot</h3>
               }
               </p>
             </div>

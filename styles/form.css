@@ -152,16 +152,14 @@
     display: flexbox;
     padding: 10px;
     text-decoration: none;
-    color: black;
 }
 .InvNOTSelected:hover {
+    color: rgb(0, 0, 0);
     background-color: rgba(7, 231, 44, 0.233);
 }
 
-.InvSelected {
-    background-color: rgb(7, 231, 45);
-}
 .InvNOTSelected {
+    color: rgb(0, 0, 0);
     background-color: rgb(236, 236, 236);
 }
 
@@ -205,20 +203,10 @@
 }
 
 .autoFill > p > a {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
     font-size: 20px;
     padding: 7px 27px;
-    border-radius: 4px;
     text-align: center;
-    text-decoration: none;
     display: inline-block;
-    cursor: pointer;
-}
-.autoFill > p > a:hover {
-    background-color: #358338c9; /* Green */
-    color: rgb(255, 255, 255) !important;
 }
 
 .formOther {
@@ -266,37 +254,12 @@ OTHER
 
 .submitButton > button {
     font-size: 30px;
-    margin: 0px !important;
-    padding: 10px !important;
-    background-color: #2e8531; /* Green */
-    border: none;
-    color: white;
-    border-radius: 4px;
-    text-align: center;
-    text-decoration: none;
     display: inline-block;
-    cursor: pointer;
     max-width: 300px;
-}
-.submitButton >button:hover {
-    background-color: #358338; /* Green */
-    color: rgb(207, 207, 207);
 }
 
 .alertInfo {
     font-size: 30px;
-    margin: 0px;
-    background-color: #af0505; /* Green */
-    border: none;
-    color: white;
-    border-radius: 4px;
-    text-align: center;
-    text-decoration: none;
     display: inline-block;
-    cursor: pointer;
     max-width: 350px;
-}
-
-.alertInfo:hover {
-    background-color: rgb(114, 114, 114);
 }

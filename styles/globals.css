@@ -75,10 +75,47 @@ input[type=number] {
 
 
 .contactFooter {
-  background-color: rgb(209, 209, 209);
+  background-color:rgb(121, 8, 0);
+  color: white;
   padding-top: 10px;
   min-height: 100px;
   margin-top: auto;
   text-align: center;
   font-size: 14px;
+}
+
+.redButton, .greenButton {
+  border: none;
+  cursor: pointer;
+  margin: 0px !important;
+  padding: 10px !important;
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none !important;
+}
+
+.greenButton>*, .redButton>* {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.redButton {
+  color: #ffffff;
+  background-color:rgb(121, 8, 0);
+}
+.redButton:hover, .redButton>*:hover {
+  background-color:rgb(88, 7, 2);
+}
+.greenButton {
+  text-decoration: none !important;
+  color: #ffffff;
+  background-color:rgb(0, 97, 16);
+}
+
+
+.greenButton:hover, .greenButton>*:hover {
+  color: #ffffff;
+  text-decoration: none !important;
+  background-color:rgb(0, 68, 12);
 }

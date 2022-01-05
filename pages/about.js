@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Link from "next/link"
 import mainPhoto from '../public/img/we.jpg'
 import Image from 'next/image'
 import AstiastoData from "../astiasto.json"
@@ -76,6 +77,9 @@ export default function About(props) {
       <h3>Muut</h3>
       {itemClass('other')}
     </div>
+    <Link href="/order" >
+      <h1 className="greenButton">Tilaa astiasto täältä</h1>
+    </Link>
   </div>
   )
 }
