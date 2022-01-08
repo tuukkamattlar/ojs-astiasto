@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
 import AstiastoData from "../astiasto.json"
-//import makeXML from "functions/xml-tool"
+import makeXML from "functions/xml-tool"
 
 export default function OrderForm(props) {
   let lan = props.language
@@ -192,8 +192,9 @@ function invTypeField() {
 }
 
 function printXML() {
-  //let xmlData = makeXML(outputOrder)
-  console.log("KUN")
+  const orderClone = JSON.parse(JSON.stringify(order))
+  Object.keys(orderClone).forEach(key => {if(orderClone[key].ORDER === 0) delete orderClone[key]})
+  let xmlData = makeXML(orderClone)
   alert('Hienosti testattu')
 }
 
