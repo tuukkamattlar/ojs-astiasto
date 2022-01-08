@@ -227,9 +227,9 @@ function printXML() {
 
         <label>Laskutustapa TODO</label>
         <p className='InvSelector'>
-          <a onClick={() => setInvTypeF('email')} className={ invType === 'email' ? 'InvSelected greenButton' : 'InvNOTSelected'}>E-mail</a>
-          <a onClick={() => setInvTypeF('einv')} className={ invType === 'einv' ? 'InvSelected greenButton' : 'InvNOTSelected'}>E-inv</a>
-          <a onClick={() => setInvTypeF('fax')} className={ invType === 'fax' ? 'InvSelected greenButton' : 'InvNOTSelected'}>Faksi</a>
+          <a onClick={() => setInvTypeF('email')} className={ invType === 'email' ? 'InvSelected ' : 'InvNOTSelected'}>E-mail</a>
+          <a onClick={() => setInvTypeF('einv')} className={ invType === 'einv' ? 'InvSelected ' : 'InvNOTSelected'}>E-inv</a>
+          <a onClick={() => setInvTypeF('fax')} className={ invType === 'fax' ? 'InvSelected' : 'InvNOTSelected'}>Faksi</a>
         </p>
 
         {invTypeField()}

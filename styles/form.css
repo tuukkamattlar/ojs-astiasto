@@ -30,11 +30,10 @@
 
 @media screen and (max-width: 1050px) {
     .formContact { 
-     float: inherit;
-     margin-right:0;
-     width:auto;
      padding: 0px;
-     margin: 0px;
+     margin: auto;
+     max-width: 350px;
+     width: 100%;
    }
    .InvSelector {
        margin: auto;
@@ -145,22 +144,51 @@
     max-width: 300px;
     width: 100%;
     cursor: pointer;
+    display: table;
+    border-radius: 5px;
 }
 
 .InvSelector>a {
-    border-radius: 5px;
-    display: flexbox;
+    display:table-cell;
+    margin: 20px;
     padding: 10px;
     text-decoration: none;
 }
+
+.InvSelected {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(135deg, rgb(4, 172, 184), rgb(114, 19, 202));
+    -webkit-transition: background 0.5s ease-out;  
+    -moz-transition: background 0.5s ease-out;  
+    -o-transition: background 0.5s ease-out;  
+    transition: background 0.5s ease-out;
+    background-size:1px 200px;
+    cursor:pointer;
+}
+
+.InvSelected:hover {
+    color: rgb(255, 255, 255);
+    background-position:100px;
+}
+
 .InvNOTSelected:hover {
-    color: rgb(0, 0, 0);
-    background-color: rgba(7, 231, 44, 0.233);
+    color: rgb(255, 255, 255);
+    background-position:100px;
+    filter: saturate(100%);
 }
 
 .InvNOTSelected {
     color: rgb(0, 0, 0);
-    background-color: rgb(236, 236, 236);
+    background: linear-gradient(135deg, rgb(4, 172, 184), rgb(114, 19, 202));
+    filter: saturate(0%);
+    -webkit-transition: background 0.5s ease-out;  
+    -moz-transition: background 0.5s ease-out;  
+    -o-transition: background 0.5s ease-out;  
+    transition: background 0.5s ease-out;
+    background-size:1px 200px;
+    transition: filter 0.5s;
+    cursor:pointer;
 }
 
 .formContact > textarea {
