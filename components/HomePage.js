@@ -6,10 +6,10 @@ export default function HomePage(props) {
 
   return (
     <>
-     <p>
-        {InfoName[lan]}
-    </p>
-    <OrderForm language={lan}/>
+      <p>
+          {InfoName[lan]}
+      </p>
+      <OrderForm language={lan}/>
     </>
   )
 }

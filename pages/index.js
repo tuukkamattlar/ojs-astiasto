@@ -12,14 +12,14 @@ export default function Home(props) {
 
   return (
     <>
-    <div className='mainContentClass contentIndex'>
-      
-      <h3>Kun tiskaat</h3>
-      <p>
-        {props.loremIpsum}
-      </p>
-      <Image src={mainPhoto} />
-    </div>
+      <div className='mainContentClass contentIndex'>
+        
+        <h3>Kun tiskaat</h3>
+        <p>
+          {props.loremIpsum}
+        </p>
+        <Image src={mainPhoto} />
+      </div>
     </>
 
   )
