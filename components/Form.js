@@ -324,7 +324,7 @@ function printXML() {
         <div>
           <h2>{priceEstimate[lan]}</h2>
         </div>
-              <h5> {Math.round(totPrice*100/0.76)/100} € (vat 24 %)</h5>
+              <h5> {Math.round(totPrice*100*1.24)/100} € (vat 24 %)</h5>
               <h5> {totPrice} € (vat 0 %)</h5>
               <p>{priceDescription[lan]}</p>
               <p className='submitButton'>
